@@ -1,0 +1,15 @@
+.myimage {
+    display: block;
+    width: 32%;
+    object-fit: cover;
+    &__profile {
+        margin: auto;
+        border-radius: 7.5rem;
+        margin-top: 1.5rem;
+    }
+    &__bg {
+        border-top-right-radius: 20rem;
+        border-bottom-left-radius: 20rem;
+        border-bottom-right-radius: 20rem;
+    }
+}
