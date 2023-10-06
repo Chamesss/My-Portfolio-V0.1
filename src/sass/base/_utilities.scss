@@ -5,3 +5,18 @@
     text-align: center;
     gap: 5rem;
 }
+
+.spaced {
+    gap:10rem;
+    &__more {
+        gap:20rem;
+    }
+}
+
+.padding {
+    padding: 0.5rem 0.5rem;
+}
+
+.vertical_gap:not(:last-child) {
+    margin-bottom: 5rem;
+}

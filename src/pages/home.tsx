@@ -45,10 +45,48 @@ function home() {
                 </section>
                 <section className='section'>
                     <div className='section__box2'>
-                        <img src='../../images/myimage-bg.png' alt="my-image-bg" className='myimage myimage__bg' />
-                        <div className='centered'>
-                            <h1 className='typo-from typo-from__title typo-from__title__2'>FULL STACK DEVELOPER CURRENTLY BASED IN TUNISIA. </h1>
-                            <p className='typo-from typo-from__subtitle'>Hi ! I'm Chamsedin Azouz, I specialize in the MERN stack, crafting captivating front-end interfaces and ensuring a robust and efficient backend experience for users.</p>
+                        <div className='row spaced'>
+                            <img src='../../images/myimage-bg.png' alt="my-image-bg" className='myimage myimage__bg' />
+                            <div className='centered'>
+                                <h1 className='typo-from typo-from__title typo-from__title__2'>FULL STACK DEVELOPER CURRENTLY BASED IN TUNISIA. </h1>
+                                <p className='typo-from typo-from__subtitle'>Hi ! I'm Chamsedin Azouz, I specialize in the MERN stack, crafting, captivating front-end interfaces and ensuring a robust and efficient backend experience for users.</p>
+                            </div>
+                        </div>
+                        <div className='line'></div>
+                        <div className='row spaced__more'>
+                            <div className='centered padding'>
+                                <h1 className='typo-from typo-from__title typo-from__title__2'>WHAT DO I WORK</h1>
+                                <p className='typo-from typo-from__subtitle'>Hi ! I'm Chamsedin Azouz, I specialize in the MERN stack, crafting, captivating front-end interfaces and ensuring a robust and efficient backend experience for users.</p>
+                            </div>
+                            <div>
+                                <div className='box'>
+                                    <div className='row'>
+                                        <img src='../../images/brands-logo/react.png' alt='react' className='brand-image' />
+                                        <img src='../../images/brands-logo/angular.png' alt='angular' className='brand-image' />
+                                        <img src='../../images/brands-logo/sass.png' alt='sass' className='brand-image' />
+                                    </div>
+                                    <p className='typo-from typo-from__box'>Front-end</p>
+                                </div>
+                                <div className='box box__grey'>
+                                    <div className='row'>
+                                        <img src='../../images/brands-logo/node.png' alt='node' className='brand-image' />
+                                        <img src='../../images/brands-logo/express.png' alt='express' className='brand-image' />
+                                    </div>
+                                    <p className='typo-from typo-from__box'>back-end</p>
+                                </div>
+                                <div className='box'>
+                                    <div className='row'>
+                                        <img src='../../images/brands-logo/mongo.png' alt='mongo' className='brand-image' />
+                                    </div>
+                                    <p className='typo-from typo-from__box'>Database</p>
+                                </div>
+                                <div className='box box__grey'>
+                                    <div className='row'>
+                                        <img src='../../images/brands-logo/azure.png' alt='azure' className='brand-image' />
+                                    </div>
+                                    <p className='typo-from typo-from__box'>Cloud</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
