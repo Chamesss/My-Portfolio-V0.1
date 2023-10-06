@@ -1,6 +1,7 @@
 .header-option {
     margin: 0.75rem 1.25rem;
     cursor:pointer;
+    width: fit-content;
     &__hire-button {
         border: 0.2rem solid $color-white;
         padding: 0.75rem 1.25rem;

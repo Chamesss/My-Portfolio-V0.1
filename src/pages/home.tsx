@@ -26,19 +26,19 @@ function home() {
                     </div>
                 </section>
                 <section className='social-media'>
-                    <a href='#' className='social-media__section'>
+                    <a href='https://github.com' className='social-media__section'>
                         <img src='../../images/github1.png' alt='github' className='social-media__image' />
                         <span className='typo-from typo-from__social'>Github</span>
                     </a>
-                    <a href='#' className='social-media__section'>
+                    <a href='https://linkedin.com' className='social-media__section'>
                         <img src='../../images/linkedin0.png' alt='linkedin' className='social-media__image' />
                         <span className='typo-from typo-from__social'>Linkedin</span>
                     </a>
-                    <a href='#' className='social-media__section'>
+                    <a href='https://facebook.com' className='social-media__section'>
                         <img src='../../images/facebook1.png' alt='facebook' className='social-media__image' />
                         <span className='typo-from typo-from__social'>Facebook</span>
                     </a>
-                    <a href='#' className='social-media__section'>
+                    <a href='https://instagram.com' className='social-media__section'>
                         <img src='../../images/instagram0.png' alt='instagram' className='social-media__image' />
                         <span className='typo-from typo-from__social'>Instagram</span>
                     </a>
@@ -46,7 +46,7 @@ function home() {
                 <section className='section'>
                     <div className='section__box2'>
                         <div className='row spaced'>
-                            <img src='../../images/myimage-bg.png' alt="my-image-bg" className='myimage myimage__bg' />
+                            <img src='../../images/myimage-bg.png' alt="profile-bg" className='myimage myimage__bg' />
                             <div className='centered'>
                                 <h1 className='typo-from typo-from__title typo-from__title__2'>FULL STACK DEVELOPER CURRENTLY BASED IN TUNISIA. </h1>
                                 <p className='typo-from typo-from__subtitle'>Hi ! I'm Chamsedin Azouz, I specialize in the MERN stack, crafting, captivating front-end interfaces and ensuring a robust and efficient backend experience for users.</p>
@@ -88,7 +88,20 @@ function home() {
                                 </div>
                             </div>
                         </div>
+                        <div className='line'></div>
+                        <div className='centered'>
+                            <h1 className='typo-from typo-from__title typo-from__title__2'>Let’s Start by Saying Hi!</h1>
+                            <span className='typo-from header-option header-option__hire-button'>Contact Me</span>
+                        </div>
                     </div>
+                    <footer>
+                        <div className='header'>
+                            <div>
+                                logos
+                            </div>
+                            <p className='typo-from'>all right reserved</p>
+                        </div>
+                    </footer>
                 </section>
             </main>
         </div>
