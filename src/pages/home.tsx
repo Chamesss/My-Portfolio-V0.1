@@ -4,7 +4,7 @@ function home() {
     return (
         <div>
             <main>
-                <section className='section'>
+                <section className='section section__1'>
                     <div className='section__box1'>
                         <header className='header typo-from typo-from__header'>
                             <div>
@@ -43,7 +43,7 @@ function home() {
                         <span className='typo-from typo-from__social'>Instagram</span>
                     </a>
                 </section>
-                <section className='section'>
+                <section className='section section__2'>
                     <div className='section__box2'>
                         <div className='row spaced'>
                             <img src='../../images/myimage-bg.png' alt="profile-bg" className='myimage myimage__bg' />
@@ -93,15 +93,26 @@ function home() {
                             <h1 className='typo-from typo-from__title typo-from__title__2'>Let’s Start by Saying Hi!</h1>
                             <span className='typo-from header-option header-option__hire-button'>Contact Me</span>
                         </div>
-                    </div>
-                    <footer>
-                        <div className='header'>
-                            <div>
-                                logos
+                        <footer>
+                            <div className='header'>
+                                <div className='row spaced__less'>
+                                    <a href='https://github.com' className='social-media__section'>
+                                        <img src='../../images/github1.png' alt='github' className='social-media__footer' />
+                                    </a>
+                                    <a href='https://linkedin.com' className='social-media__section'>
+                                        <img src='../../images/linkedin0.png' alt='linkedin' className='social-media__footer' />
+                                    </a>
+                                    <a href='https://facebook.com' className='social-media__section'>
+                                        <img src='../../images/facebook1.png' alt='facebook' className='social-media__footer' />
+                                    </a>
+                                    <a href='https://instagram.com' className='social-media__section'>
+                                        <img src='../../images/instagram0.png' alt='instagram' className='social-media__footer' />
+                                    </a>
+                                </div>
+                                <span className='typo-from typo-from__footer'>Created by <span className='typo-from__footer__name'>Chamsedin Azouz</span> | Copyright &copy; 2023 All rights reserved</span>
                             </div>
-                            <p className='typo-from'>all right reserved</p>
-                        </div>
-                    </footer>
+                        </footer>
+                    </div>
                 </section>
             </main>
         </div>
