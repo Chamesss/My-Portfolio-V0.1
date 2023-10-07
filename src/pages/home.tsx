@@ -1,22 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-function home() {
+function Home() {
+
+    const [isHeaderFixed, setIsHeaderFixed] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            setIsHeaderFixed(scrollPosition > 1);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <div>
             <main>
+                <header className={`header typo-from typo-from__header${isHeaderFixed ? ' sticky' : ''}`}>
+                    <div>
+                        <span>Chams</span>
+                    </div>
+                    <div className='typo-from__options'>
+                        <span className='header-option'>Home</span>
+                        <span className='header-option'>About</span>
+                        <span className='header-option'>Services</span>
+                        <span className='header-option header-option__hire-button'>Contact Me</span>
+                    </div>
+                </header>
                 <section className='section section__1'>
+
                     <div className='section__box1'>
-                        <header className='header typo-from typo-from__header'>
-                            <div>
-                                <span>Chams</span>
-                            </div>
-                            <div className='typo-from__options'>
-                                <span className='header-option'>Home</span>
-                                <span className='header-option'>About</span>
-                                <span className='header-option'>Services</span>
-                                <span className='header-option header-option__hire-button'>Contact Me</span>
-                            </div>
-                        </header>
                         <div>
                             <h1 className='typo-from typo-from__title'>I'm ChamseDin Azouz.</h1>
                             <h2 className='typo-from typo-from__subtitle'>Full Stack Developer</h2>
@@ -56,7 +72,7 @@ function home() {
                         <div className='row spaced__more'>
                             <div className='centered padding'>
                                 <h1 className='typo-from typo-from__title typo-from__title__2'>WHAT DO I WORK</h1>
-                                <p className='typo-from typo-from__subtitle'>Hi ! I'm Chamsedin Azouz, I specialize in the MERN stack, crafting, captivating front-end interfaces and ensuring a robust and efficient backend experience for users.</p>
+                                <p className='typo-from typo-from__subtitle'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             </div>
                             <div>
                                 <div className='box'>
@@ -65,26 +81,26 @@ function home() {
                                         <img src='../../images/brands-logo/angular.png' alt='angular' className='brand-image' />
                                         <img src='../../images/brands-logo/sass.png' alt='sass' className='brand-image' />
                                     </div>
-                                    <p className='typo-from typo-from__box'>Front-end</p>
+                                    <p className='typo-from typo-from__box'>Creation of interactive interfaces</p>
                                 </div>
                                 <div className='box box__grey'>
                                     <div className='row'>
                                         <img src='../../images/brands-logo/node.png' alt='node' className='brand-image' />
                                         <img src='../../images/brands-logo/express.png' alt='express' className='brand-image' />
                                     </div>
-                                    <p className='typo-from typo-from__box'>back-end</p>
+                                    <p className='typo-from typo-from__box'>Creating solid, functional APIs</p>
                                 </div>
                                 <div className='box'>
                                     <div className='row'>
                                         <img src='../../images/brands-logo/mongo.png' alt='mongo' className='brand-image' />
                                     </div>
-                                    <p className='typo-from typo-from__box'>Database</p>
+                                    <p className='typo-from typo-from__box'>DB optimization & management</p>
                                 </div>
                                 <div className='box box__grey'>
                                     <div className='row'>
                                         <img src='../../images/brands-logo/azure.png' alt='azure' className='brand-image' />
                                     </div>
-                                    <p className='typo-from typo-from__box'>Cloud</p>
+                                    <p className='typo-from typo-from__box'>Application deployment & scaling</p>
                                 </div>
                             </div>
                         </div>
@@ -94,7 +110,7 @@ function home() {
                             <span className='typo-from header-option header-option__hire-button'>Contact Me</span>
                         </div>
                         <footer>
-                            <div className='header'>
+                            <div className=''>
                                 <div className='row spaced__less'>
                                     <a href='https://github.com' className='social-media__section'>
                                         <img src='../../images/github1.png' alt='github' className='social-media__footer' />
@@ -119,4 +135,4 @@ function home() {
     );
 }
 
-export default home;
+export default Home;
