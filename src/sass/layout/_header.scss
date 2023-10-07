@@ -10,9 +10,11 @@
     padding: 4rem 10rem;
     z-index: 9999;
     background-color: transparent;
+    box-shadow: none;
 }
 
 .header.sticky {
     padding: 2rem 10rem;
     background-color: $color-black;
+    box-shadow: none;
 }

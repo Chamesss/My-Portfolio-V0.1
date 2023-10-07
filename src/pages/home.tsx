@@ -7,7 +7,7 @@ function Home() {
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
-            setIsHeaderFixed(scrollPosition > 1);
+            setIsHeaderFixed(scrollPosition > 0);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -19,7 +19,7 @@ function Home() {
     return (
         <div>
             <main>
-                <header className={`header typo-from typo-from__header${isHeaderFixed ? ' sticky' : ''}`}>
+                <header className={`header typo-from typo-from__header${isHeaderFixed ? ' sticky' : ' '}`}>
                     <div>
                         <span>Chams</span>
                     </div>
@@ -31,7 +31,6 @@ function Home() {
                     </div>
                 </header>
                 <section className='section section__1'>
-
                     <div className='section__box1'>
                         <div>
                             <h1 className='typo-from typo-from__title'>I'm ChamseDin Azouz.</h1>
