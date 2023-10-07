@@ -23,3 +23,8 @@
 .vertical_gap:not(:last-child) {
     margin-bottom: 5rem;
 }
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}

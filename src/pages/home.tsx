@@ -16,6 +16,17 @@ function Home() {
         };
     }, []);
 
+    const handleScroll = (id: string) => {
+        if (id === 'top') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    };
+
     return (
         <div>
             <main>
@@ -24,9 +35,9 @@ function Home() {
                         <span>Chams</span>
                     </div>
                     <div className='typo-from__options'>
-                        <span className='header-option'>Home</span>
-                        <span className='header-option'>About</span>
-                        <span className='header-option'>Services</span>
+                        <span onClick={() => handleScroll('top')} className='header-option'>Home</span>
+                        <span onClick={() => handleScroll('about')} className='header-option'>About</span>
+                        <span onClick={() => handleScroll('services')} className='header-option'>Services</span>
                         <span className='header-option header-option__hire-button'>Contact Me</span>
                     </div>
                 </header>
@@ -58,7 +69,7 @@ function Home() {
                         <span className='typo-from typo-from__social'>Instagram</span>
                     </a>
                 </section>
-                <section className='section section__2'>
+                <section id='about' className='section section__2'>
                     <div className='section__box2'>
                         <div className='row spaced'>
                             <img src='../../images/myimage-bg.png' alt="profile-bg" className='myimage myimage__bg' />
@@ -67,7 +78,7 @@ function Home() {
                                 <p className='typo-from typo-from__subtitle'>Hi ! I'm Chamsedin Azouz, I specialize in the MERN stack, crafting, captivating front-end interfaces and ensuring a robust and efficient backend experience for users.</p>
                             </div>
                         </div>
-                        <div className='line'></div>
+                        <div id='services' className='line'></div>
                         <div className='row spaced__more'>
                             <div className='centered padding'>
                                 <h1 className='typo-from typo-from__title typo-from__title__2'>WHAT DO I WORK</h1>
@@ -109,7 +120,7 @@ function Home() {
                             <span className='typo-from header-option header-option__hire-button'>Contact Me</span>
                         </div>
                         <footer>
-                            <div className=''>
+                            <div className='space-between'>
                                 <div className='row spaced__less'>
                                     <a href='https://github.com' className='social-media__section'>
                                         <img src='../../images/github1.png' alt='github' className='social-media__footer' />
