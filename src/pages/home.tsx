@@ -197,11 +197,11 @@ function Home() {
                         <span className="close" onClick={() => closeModal()}>
                             &times;
                         </span>
-                        <div className='modal__main row padding__extra spaced'>
+                        <div className='modal__main row padding__extra spaced__more'>
                             <div className='modal__info column'>
-                                <h1 className='typo-from typo-from__title typo-from__title__2'>contact me</h1>
-                                <p className='typo-from'>chamsedin.azouz@gmail.com</p>
-                                <p className='typo-from'>+216 92448974</p>
+                                <p className='typo-from typo-from__title typo-from__title__2'>contact me</p>
+                                <p className='typo-from typo-from__modal'>chamsedin.azouz@gmail.com</p>
+                                <p className='typo-from typo-from'>+216 92448974</p>
                                 <button>download cv</button>
                             </div>
                             <div className='modal__input column'>

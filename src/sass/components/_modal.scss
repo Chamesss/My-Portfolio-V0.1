@@ -21,23 +21,28 @@
     border-radius: 5rem;
 
     &__content {
-        display: flex;
-        justify-content: flex-start;
         border: 1px solid red;
+        display: flex;
     }
 
     &__main {
         border: 1px solid blue;
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
     }
 
     &__input {
-        
+        width: 100%;
         border: 1px solid green;
     }
 
     &__info {
         display: flex;
         align-items: flex-start;
+        justify-content: flex-start;
+        width: 50%;
+        border: 1px solid yellow;
     }
 }
 
