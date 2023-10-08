@@ -1,0 +1,10 @@
+.input {
+    width: auto;
+    padding: 1rem 1rem;
+    outline: none;
+    border-radius: 0.75rem;
+
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+}

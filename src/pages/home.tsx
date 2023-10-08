@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 function Home() {
 
     const [isHeaderFixed, setIsHeaderFixed] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const modalEl = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -16,6 +18,26 @@ function Home() {
         };
     }, []);
 
+    useEffect(() => {
+        const handler = (event: MouseEvent) => {
+            if (!modalEl.current) {
+                console.log('didnt close');
+                return;
+            }
+
+            if (event.target && !modalEl.current.contains(event.target as Node)) {
+                setIsModalOpen(false);
+                closeModal();
+            }
+        };
+
+        document.addEventListener("click", handler, true);
+        return () => {
+            document.removeEventListener("click", handler);
+        };
+    }, []);
+
+
     const handleScroll = (id: string) => {
         if (id === 'top') {
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -27,9 +49,34 @@ function Home() {
         }
     };
 
+    const openModal = () => {
+        const modalElement = document.getElementById("myModal");
+        if (modalElement) {
+            modalElement.style.display = "block";
+            const overlay = document.getElementById("overlay");
+            if (overlay) {
+                overlay.style.display = "block";
+            }
+        }
+        setIsModalOpen(true);
+    }
+
+
+    const closeModal = () => {
+        const modalElement = document.getElementById("myModal");
+        if (modalElement) {
+            modalElement.style.display = "none";
+            const overlay = document.getElementById("overlay");
+            if (overlay) {
+                overlay.style.display = "none";
+            }
+        }
+        setIsModalOpen(false);
+    }
+
     return (
-        <div>
-            <main>
+        <div >
+            <main className='relative'>
                 <header className={`header typo-from typo-from__header${isHeaderFixed ? ' sticky' : ' '}`}>
                     <div>
                         <span>Chams</span>
@@ -38,7 +85,7 @@ function Home() {
                         <span onClick={() => handleScroll('top')} className='header-option'>Home</span>
                         <span onClick={() => handleScroll('about')} className='header-option'>About</span>
                         <span onClick={() => handleScroll('services')} className='header-option'>Services</span>
-                        <span className='header-option header-option__hire-button'>Contact Me</span>
+                        <span className='header-option header-option__hire-button' onClick={openModal}>Contact Me</span>
                     </div>
                 </header>
                 <section className='section section__1'>
@@ -140,6 +187,33 @@ function Home() {
                         </footer>
                     </div>
                 </section>
+
+                {/* Overlay */}
+                {isModalOpen && <div id="overlay" className="overlay"></div>}
+
+                {/* Modal */}
+                <div id="myModal" className="modal" ref={modalEl}>
+                    <div className="modal__content">
+                        <span className="close" onClick={() => closeModal()}>
+                            &times;
+                        </span>
+                        <div className='modal__main row padding__extra spaced'>
+                            <div className='modal__info column'>
+                                <h1 className='typo-from typo-from__title typo-from__title__2'>contact me</h1>
+                                <p className='typo-from'>chamsedin.azouz@gmail.com</p>
+                                <p className='typo-from'>+216 92448974</p>
+                                <button>download cv</button>
+                            </div>
+                            <div className='modal__input column'>
+                                <input className='input' placeholder='Your name' />
+                                <input className='input' placeholder='Your email' />
+                                <input className='input' placeholder='Your message' />
+                                <button>submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </main>
         </div>
     );
