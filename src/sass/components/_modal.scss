@@ -5,7 +5,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9999; 
+    z-index: 9999;
 }
 
 .modal {
@@ -14,11 +14,29 @@
     left: 50%;
     transform: translate(-50%, -50%);
     position: fixed;
-    background-color:rgb(33, 33, 33);
+    background:
+        linear-gradient(-135deg, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 50%) left,
+        linear-gradient(135deg, rgba(0, 0, 0) 50%, rgba(0, 0, 0) 50%) right;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
     width: 80vw;
     height: fit-content;
     z-index: 99999;
     border-radius: 5rem;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 40%;
+        height: 100%;
+        width: 10%;
+        background: linear-gradient(to right, rgba(30, 30, 30) 50%, rgba(0, 0, 0) 10%);
+        transform: skewX(-20deg);
+        transform-origin: bottom left;
+        z-index: -9;
+        overflow:hidden
+    }
 
 
     &__content {
@@ -57,4 +75,3 @@
         overflow: hidden;
     }
 }
-
