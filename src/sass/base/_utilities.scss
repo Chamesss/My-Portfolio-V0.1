@@ -4,6 +4,10 @@
     justify-content: center;
     align-items: center;
     gap: 5rem;
+    &__non-gap {
+        gap: 0;
+        justify-content: flex-start !important;
+    }
 }
 
 .spaced {

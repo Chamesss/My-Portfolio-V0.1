@@ -20,29 +20,41 @@
     z-index: 99999;
     border-radius: 5rem;
 
+
     &__content {
-        border: 1px solid red;
+        // border: 1px solid red;
         display: flex;
     }
 
     &__main {
-        border: 1px solid blue;
+        // border: 1px solid blue;
         display: flex;
         align-items: flex-start;
         width: 100%;
     }
 
     &__input {
+        padding: 2rem 2rem;
         width: 100%;
         border: 1px solid green;
     }
 
     &__info {
+        padding: 2rem 2rem;
         display: flex;
         align-items: flex-start;
-        justify-content: flex-start;
+        justify-content: space-between;
         width: 50%;
+        height: 100%;
         border: 1px solid yellow;
+    }
+
+    &__image {
+        display: inline-block;
+        width: 2rem;
+        margin-right: 1rem;
+        height: auto;
+        overflow: hidden;
     }
 }
 

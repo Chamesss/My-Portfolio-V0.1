@@ -199,16 +199,24 @@ function Home() {
                         </span>
                         <div className='modal__main row padding__extra spaced__more'>
                             <div className='modal__info column'>
-                                <p className='typo-from typo-from__title typo-from__title__2'>contact me</p>
-                                <p className='typo-from typo-from__modal'>chamsedin.azouz@gmail.com</p>
-                                <p className='typo-from typo-from'>+216 92448974</p>
-                                <button>download cv</button>
+                                <p className='typo-from typo-from__title typo-from__title__2 typo-from__title__2__pop-up'>Contact Me</p>
+                                <div>
+                                    <div className='centered centered__non-gap row'>
+                                        <img className='modal__image' src='../../images/email.png' alt='email' />
+                                        <p className='typo-from typo-from__modal'>chamsedin.azouz@gmail.com</p>
+                                    </div>
+                                    <div className='centered centered__non-gap row'>
+                                        <img className='modal__image' src='../../images/phone.png' alt='phone' />
+                                        <p className='typo-from typo-from__modal'>+216 92448974</p>
+                                    </div>
+                                </div>
+                                <button className='button'>download cv</button>
                             </div>
                             <div className='modal__input column'>
                                 <input className='input' placeholder='Your name' />
                                 <input className='input' placeholder='Your email' />
-                                <input className='input' placeholder='Your message' />
-                                <button>submit</button>
+                                <textarea className='input input__message' placeholder='Your message' />
+                                <button className='button'>submit</button>
                             </div>
                         </div>
                     </div>
