@@ -210,13 +210,13 @@ function Home() {
                                         <p className='typo-from typo-from__modal'>+216 92448974</p>
                                     </div>
                                 </div>
-                                <button className='button'>download cv</button>
+                                <button className='button'>Download cv</button>
                             </div>
                             <div className='modal__input column'>
                                 <input className='input' placeholder='Your name' />
                                 <input className='input' placeholder='Your email' />
                                 <textarea className='input input__message' placeholder='Your message' />
-                                <button className='button'>submit</button>
+                                <button className='button'>Send</button>
                             </div>
                         </div>
                     </div>

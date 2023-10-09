@@ -14,7 +14,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     position: fixed;
-    background-color: $color-black;
+    background-color:rgb(33, 33, 33);
     width: 80vw;
     height: fit-content;
     z-index: 99999;
@@ -36,7 +36,7 @@
     &__input {
         padding: 2rem 2rem;
         width: 100%;
-        border: 1px solid green;
+        // border: 1px solid green;
     }
 
     &__info {
@@ -46,7 +46,7 @@
         justify-content: space-between;
         width: 50%;
         height: 100%;
-        border: 1px solid yellow;
+        // border: 1px solid yellow;
     }
 
     &__image {
