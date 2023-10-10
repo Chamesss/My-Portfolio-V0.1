@@ -1,17 +1,15 @@
 .box {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
-    width: 40rem;
-    height: fit-content;
-    padding: 2rem 3rem 0rem 3rem;
+    width: 25rem;
+    height: 25rem;
+    padding: 2rem 3rem 2rem 3rem;
     background-color: rgba($color-white, 0.7);
     border-radius: 2.5rem;
+    box-shadow: 0 3rem 6rem rgba($color-black, .4);
     cursor: pointer;
     &__grey {
-        background-color: rgba($color-white, 0.5);;
-    }
-    &:not(:last-child){
-        margin-bottom: 2.5rem;
+        background-color: rgba($color-white, 0.65);;
     }
 }

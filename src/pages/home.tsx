@@ -38,7 +38,8 @@ function Home() {
     }, []);
 
 
-    const handleScroll = (id: string) => {
+    const handleScroll = (id: string, event: React.MouseEvent) => {
+        event.preventDefault();
         if (id === 'top') {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         } else {
@@ -82,10 +83,10 @@ function Home() {
                         <span>Chams</span>
                     </div>
                     <div className='typo-from__options'>
-                        <span onClick={() => handleScroll('top')} className='header-option'>Home</span>
-                        <span onClick={() => handleScroll('about')} className='header-option'>About</span>
-                        <span onClick={() => handleScroll('services')} className='header-option'>Services</span>
-                        <span className='header-option header-option__hire-button' onClick={openModal}>Contact Me</span>
+                        <a href='#home' onClick={(e) => handleScroll('top', e)} className='header-option'>Home</a>
+                        <a href='#about' onClick={(e) => handleScroll('about', e)} className='header-option'>About</a>
+                        <a href='#services' onClick={(e) => handleScroll('services', e)} className='header-option'>Services</a>
+                        <button className='header-option header-option__hire-button' onClick={openModal}>Contact Me</button>
                     </div>
                 </header>
                 <section className='section section__1'>
@@ -126,12 +127,14 @@ function Home() {
                             </div>
                         </div>
                         <div id='services' className='line'></div>
-                        <div className='row spaced__more'>
+                        <div className='column spaced'>
                             <div className='centered padding'>
                                 <h1 className='typo-from typo-from__title typo-from__title__2'>WHAT DO I WORK</h1>
                                 <p className='typo-from typo-from__subtitle'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             </div>
-                            <div>
+                            <div className='row spaced__less center'>
+
+
                                 <div className='box'>
                                     <div className='row'>
                                         <img src='../../images/brands-logo/react.png' alt='react' className='brand-image' />
@@ -159,6 +162,41 @@ function Home() {
                                     </div>
                                     <p className='typo-from typo-from__box'>Application deployment & scaling</p>
                                 </div>
+
+
+
+                                {/* 
+                                <div className="card">
+                                    <div className="card__side card__side--front">
+                                        <div className="card__picture card__picture--2">
+                                            &nbsp;
+                                        </div>
+                                        <h4 className="card__heading">
+                                            <span className="card__heading-span card__heading-span--2">The Forest Hiker</span>
+                                        </h4>
+                                        <div className="card__details">
+                                            <ul>
+                                                <li>7 day tours</li>
+                                                <li>Up to 40 people</li>
+                                                <li>6 tour guides</li>
+                                                <li>Sleep in provided tents</li>
+                                                <li>Difficulty: medium</li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                    <div className="card__side card__side--back card__side--back-2">
+                                        <div className="card__cta">
+                                            <div className="card__price-box">
+                                                <p className="card__price-only">Only</p>
+                                                <p className="card__price-value">$497</p>
+                                            </div>
+                                            <a href="#popup" className="btn btn--white">Book now!</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                */}
+
                             </div>
                         </div>
                         <div className='line'></div>
@@ -194,9 +232,9 @@ function Home() {
                 {/* Modal */}
                 <div id="myModal" className="modal" ref={modalEl}>
                     <div className="modal__content">
-                        <span className="close" onClick={() => closeModal()}>
+                        <button className="modal__close" onClick={() => closeModal()}>
                             &times;
-                        </span>
+                        </button>
                         <div className='modal__main row padding__extra spaced__more'>
                             <div className='modal__info column'>
                                 <p className='typo-from typo-from__title typo-from__title__2 typo-from__title__2__pop-up'>Contact Me</p>

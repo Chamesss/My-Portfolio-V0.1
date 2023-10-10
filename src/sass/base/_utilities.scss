@@ -10,6 +10,12 @@
     }
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .spaced {
     gap:10rem;
     &__more {
