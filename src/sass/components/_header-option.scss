@@ -1,9 +1,38 @@
 .header-option {
     margin: 0.75rem 1.25rem;
-    cursor:pointer;
+    cursor: pointer;
     width: fit-content;
     text-decoration: none;
     color: $color-white;
+    display: inline-block;
+    position: relative;
+    transition: all .3s ease;
+
+    &:visited {
+        color: $color-white;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        height: 0.25rem;
+        background-color: $color-white;
+        border-radius: 2rem;
+        transform: translateX(-50%);
+        transition: width .3s cubic-bezier(.94, .29, 0, .63) .1s;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+
     &__hire-button {
         border: 0.2rem solid $color-white;
         padding: 0.75rem 1.25rem;
