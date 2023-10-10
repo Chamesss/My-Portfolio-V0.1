@@ -21,11 +21,11 @@ function Home() {
     useEffect(() => {
         const handler = (event: MouseEvent) => {
             if (!modalEl.current) {
-                console.log('didnt close');
                 return;
             }
 
-            if (event.target && !modalEl.current.contains(event.target as Node)) {
+            if (event.target && !modalEl.current.contains(event.target as Node) && isModalOpen) {
+                console.log('this is useeffect intefering :p');
                 setIsModalOpen(false);
                 closeModal();
             }
@@ -35,7 +35,7 @@ function Home() {
         return () => {
             document.removeEventListener("click", handler);
         };
-    }, []);
+    }, [isModalOpen]);
 
 
     const handleScroll = (id: string, event: React.MouseEvent) => {
@@ -65,15 +65,21 @@ function Home() {
 
     const closeModal = () => {
         const modalElement = document.getElementById("myModal");
-        if (modalElement) {
-            modalElement.style.display = "none";
-            const overlay = document.getElementById("overlay");
-            if (overlay) {
+        const modal = document.querySelector('.modal');
+        const overlay = document.getElementById("overlay");
+
+        if (modal && overlay && modalElement) {
+            modal.classList.add('modal__modal-closing');
+
+            setTimeout(() => {
+                modalElement.style.display = "none";
                 overlay.style.display = "none";
-            }
+                modal.classList.remove('modal__modal-closing');
+            }, 500);
         }
+
         setIsModalOpen(false);
-    }
+    };
 
     return (
         <div >
@@ -99,23 +105,64 @@ function Home() {
                         <span className='typo-from typo-from__sided'>CHAMES</span>
                     </div>
                 </section>
+
+
                 <section className='social-media'>
-                    <a href='https://github.com' className='social-media__section'>
-                        <img src='../../images/github1.png' alt='github' className='social-media__image' />
-                        <span className='typo-from typo-from__social'>Github</span>
-                    </a>
-                    <a href='https://linkedin.com' className='social-media__section'>
-                        <img src='../../images/linkedin0.png' alt='linkedin' className='social-media__image' />
-                        <span className='typo-from typo-from__social'>Linkedin</span>
-                    </a>
-                    <a href='https://facebook.com' className='social-media__section'>
-                        <img src='../../images/facebook1.png' alt='facebook' className='social-media__image' />
-                        <span className='typo-from typo-from__social'>Facebook</span>
-                    </a>
-                    <a href='https://instagram.com' className='social-media__section'>
-                        <img src='../../images/instagram0.png' alt='instagram' className='social-media__image' />
-                        <span className='typo-from typo-from__social'>Instagram</span>
-                    </a>
+
+                    <div className='social-media__container'  onClick={() => window.open("https://github.com/Chamesss", '_blank')}>
+                        <div className='social-media__face social-media__face__front'>
+                            <a href='#null' className='social-media__section'>
+                                <img src='../../images/github1.png' alt='github' className='social-media__image' />
+                            </a>
+                            <span className='typo-from typo-from__social'>Github</span>
+                        </div>
+                        <div className='social-media__face social-media__face__back'>
+                            <p className='typo-from'>Go To URL</p>
+                            <img src='../../images/external.png' alt="external" className='social-media__external-image'/>
+                        </div>
+                    </div>
+
+                    <div className='social-media__container' onClick={() => window.open("https://www.linkedin.com/in/chamsedin-azouz-613a77245", '_blank')}>
+                        <div className='social-media__face social-media__face__front'>
+                            <a href='#null' className='social-media__section'>
+                                <img src='../../images/linkedin0.png' alt='linkedin' className='social-media__image' />
+                            </a>
+                            <span className='typo-from typo-from__social'>Linkedin</span>
+                        </div>
+                        <div className='social-media__face social-media__face__back'>
+                            <p className='typo-from'>Go To URL</p>
+                            <img src='../../images/external.png' alt="external" className='social-media__external-image'/>
+                        </div>
+                    </div>
+
+                    <div className='social-media__container' onClick={() => window.open("https://www.facebook.com/ChamseDin.Azouz/", '_blank')}>
+                        <div className='social-media__face social-media__face__front'>
+                            <a href='#null' className='social-media__section'>
+                                <img src='../../images/facebook1.png' alt='facebook' className='social-media__image' />
+                            </a>
+                            <span className='typo-from typo-from__social'>Facebook</span>
+                        </div>
+                        <div className='social-media__face social-media__face__back'>
+                            <p className='typo-from'>Go To URL</p>
+                            <img src='../../images/external.png' alt="external" className='social-media__external-image'/>
+                        </div>
+                    </div>
+
+                    <div className='social-media__container' onClick={() => window.open("https://www.instagram.com/chamess_azzouz/", '_blank')}>
+                        <div className='social-media__face social-media__face__front'>
+                            <a href='#null' className='social-media__section'>
+                                <img src='../../images/instagram0.png' alt='instagram' className='social-media__image' />
+                            </a>
+                            <span className='typo-from typo-from__social'>Instagram</span>
+                        </div>
+                        <div className='social-media__face social-media__face__back'>
+                            <p className='typo-from'>Go To URL</p>
+                            <img src='../../images/external.png' alt="external" className='social-media__external-image'/>
+                        </div>
+                    </div>
+
+
+
                 </section>
                 <section id='about' className='section section__2'>
                     <div className='section__box2'>
@@ -207,16 +254,16 @@ function Home() {
                         <footer>
                             <div className='space-between'>
                                 <div className='row spaced__less'>
-                                    <a href='https://github.com' className='social-media__section'>
+                                    <a href='#null' className='social-media__section' onClick={() => window.open("https://github.com/Chamesss", '_blank')}>
                                         <img src='../../images/github1.png' alt='github' className='social-media__footer' />
                                     </a>
-                                    <a href='https://linkedin.com' className='social-media__section'>
+                                    <a href='#null' className='social-media__section' onClick={() => window.open("https://www.linkedin.com/in/chamsedin-azouz-613a77245", '_blank')}>
                                         <img src='../../images/linkedin0.png' alt='linkedin' className='social-media__footer' />
                                     </a>
-                                    <a href='https://facebook.com' className='social-media__section'>
+                                    <a href='#null' className='social-media__section' onClick={() => window.open("https://www.facebook.com/ChamseDin.Azouz/", '_blank')}>
                                         <img src='../../images/facebook1.png' alt='facebook' className='social-media__footer' />
                                     </a>
-                                    <a href='https://instagram.com' className='social-media__section'>
+                                    <a href='#null' className='social-media__section' onClick={() => window.open("https://www.instagram.com/chamess_azzouz/", '_blank')}>
                                         <img src='../../images/instagram0.png' alt='instagram' className='social-media__footer' />
                                     </a>
                                 </div>
@@ -232,7 +279,7 @@ function Home() {
                 {/* Modal */}
                 <div id="myModal" className="modal" ref={modalEl}>
                     <div className="modal__content">
-                        <button className="modal__close" onClick={() => closeModal()}>
+                        <button className="modal__close" onClick={closeModal}>
                             &times;
                         </button>
                         <div className='modal__main row padding__extra spaced__more'>

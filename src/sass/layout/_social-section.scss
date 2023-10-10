@@ -1,28 +1,72 @@
 .social-media {
     display: flex;
+    align-items: center;
     justify-content: space-around;
     padding: 3.5rem 0;
     background-color: $color-black;
-    &__section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-        cursor: pointer;
-        text-decoration: none;
-        transition: all .3s ease;
-        &:hover {
-            transform: scale(1.1);
+
+    
+
+
+    &__container {
+        position: relative;
+        perspective: 150rem;
+        -moz-perspective: 150rem;
+        height: 13rem;
+        width: 10rem;
+
+
+        &:hover .social-media__face__front {
+            transform: rotateY(-180deg);
+        }
+    
+        &:hover .social-media__face__back {
+            transform: rotateY(0);
         }
     }
+
+    &__face {
+        height: 13rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+        &__front {
+            background-color: transparent;
+        }
+
+        &__back {
+            transform: rotateY(180deg);
+            cursor: pointer;
+        }
+    }
+
+
     &__image {
         width: 8.5rem;
-        
+
     }
+
+    &__external-image {
+        width: 1.75rem;
+    }
+
     &__footer {
         width: 3rem;
         box-shadow: 0 3rem 6rem rgba($color-black, .4);
         transition: all .3s ease;
+
         &:hover {
             transform: scale(1.1);
         }
