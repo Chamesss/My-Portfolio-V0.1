@@ -19,6 +19,8 @@ body {
         font-weight: 700;
         text-align: center;
         padding-top: 10rem;
+        opacity: 0;
+        animation: simpleFadeIn 0.5s 0.75s forwards;
 
         &__2 {
             padding-top: 0rem;
@@ -36,6 +38,9 @@ body {
         color: rgba($color-white, 0.5);
         font-weight: 600;
         text-align: center;
+        opacity: 0;
+
+        animation: rightInvade 0.5s 1.25s forwards;
     }
 
     &__sided {
