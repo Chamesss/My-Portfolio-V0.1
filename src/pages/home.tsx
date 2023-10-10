@@ -86,7 +86,7 @@ function Home() {
                         <a href='#home' onClick={(e) => handleScroll('top', e)} className='header-option'>Home</a>
                         <a href='#about' onClick={(e) => handleScroll('about', e)} className='header-option'>About</a>
                         <a href='#services' onClick={(e) => handleScroll('services', e)} className='header-option'>Services</a>
-                        <button className='header-option header-option__hire-button' onClick={openModal}>Contact Me</button>
+                        <button className='header-option__hire-button' onClick={openModal}>Contact Me</button>
                     </div>
                 </header>
                 <section className='section section__1'>
@@ -202,7 +202,7 @@ function Home() {
                         <div className='line'></div>
                         <div className='centered'>
                             <h1 className='typo-from typo-from__title typo-from__title__2'>Let’s Start by Saying Hi!</h1>
-                            <span className='typo-from header-option header-option__hire-button'>Contact Me</span>
+                            <span className='header-option__hire-button'>Contact Me</span>
                         </div>
                         <footer>
                             <div className='space-between'>

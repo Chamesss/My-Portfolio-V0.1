@@ -10,12 +10,21 @@
         gap: 1.5rem;
         cursor: pointer;
         text-decoration: none;
+        transition: all .3s ease;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
     &__image {
         width: 8.5rem;
+        
     }
     &__footer {
         width: 3rem;
         box-shadow: 0 3rem 6rem rgba($color-black, .4);
+        transition: all .3s ease;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }

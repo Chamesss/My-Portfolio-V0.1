@@ -5,11 +5,14 @@
     width: 25rem;
     height: 25rem;
     padding: 2rem 3rem 2rem 3rem;
-    background-color: rgba($color-white, 0.7);
+    background-color: rgba($color-white, 0.8);
     border-radius: 2.5rem;
     box-shadow: 0 3rem 6rem rgba($color-black, .4);
+    transition: all 0.3s ease;
     cursor: pointer;
-    &__grey {
-        background-color: rgba($color-white, 0.65);;
+    border: 0.5rem solid rgb(160, 160, 160);
+
+    &:hover {
+        transform: scale(1.05);
     }
 }

@@ -40,5 +40,17 @@
         background-color: transparent;
         font-size: 2rem;
         font-family: inherit;
+        margin: 0.75rem 1.25rem;
+        cursor: pointer;
+        width: fit-content;
+        text-decoration: none;
+        color: $color-white;
+        display: inline-block;
+        position: relative;
+        transition: all .3s ease;
+
+        &:hover {
+            transform: translateY(-0.5rem) scale(1.025); 
+        }
     }
 }
