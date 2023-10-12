@@ -81,35 +81,39 @@ function Home() {
         setIsModalOpen(false);
     };
 
+
     return (
         <div >
             <main className='relative'>
                 <header className={`header typo-from typo-from__header${isHeaderFixed ? ' sticky' : ' '}`}>
                     <div>
-                        <span>Chams</span>
+                        <span className='typo-from__header-title'>Chams</span>
                     </div>
                     <div className='typo-from__options'>
                         <a href='#home' onClick={(e) => handleScroll('top', e)} className='header-option'>Home</a>
                         <a href='#about' onClick={(e) => handleScroll('about', e)} className='header-option'>About</a>
                         <a href='#services' onClick={(e) => handleScroll('services', e)} className='header-option'>Services</a>
                         <button className='header-option__hire-button' onClick={openModal}>Contact Me</button>
+                        {/*<iframe src="https://giphy.com/embed/FnTOtJeHpmrGlQPxrs" width="50" height="30" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>   */}
                     </div>
                 </header>
                 <section className='section section__1'>
                     <div className='section__box1'>
                         <div>
-                            <h1 className='typo-from typo-from__title'>I'm ChamseDin Azouz.</h1>
+                            <h1 className='typo-from typo-from__title typo-from__title__glowing'>I'm ChamseDin Azouz.</h1>
                             <h2 className='typo-from typo-from__subtitle'>Full Stack Developer</h2>
                         </div>
                         <img src='../../images/myimage.png' alt='profile' className='myimage myimage__profile' />
-                        <span className='typo-from typo-from__sided'>CHAMES</span>
+                        <span className='typo-from typo-from__sided'>
+                            {/* <iframe src="https://giphy.com/embed/wmipEZyArvXgl1Zn01" width="200" height="200" frameBorder="0" className="giphy-embed" allowFullScreen></iframe> */}
+                        </span>
                     </div>
                 </section>
 
 
                 <section className='social-media'>
 
-                    <div className='social-media__container'  onClick={() => window.open("https://github.com/Chamesss", '_blank')}>
+                    <div className='social-media__container' onClick={() => window.open("https://github.com/Chamesss", '_blank')}>
                         <div className='social-media__face social-media__face__front'>
                             <a href='#null' className='social-media__section'>
                                 <img src='../../images/github1.png' alt='github' className='social-media__image' />
@@ -118,7 +122,7 @@ function Home() {
                         </div>
                         <div className='social-media__face social-media__face__back'>
                             <p className='typo-from'>Go To URL</p>
-                            <img src='../../images/external.png' alt="external" className='social-media__external-image'/>
+                            <img src='../../images/external.png' alt="external" className='social-media__external-image' />
                         </div>
                     </div>
 
@@ -131,7 +135,7 @@ function Home() {
                         </div>
                         <div className='social-media__face social-media__face__back'>
                             <p className='typo-from'>Go To URL</p>
-                            <img src='../../images/external.png' alt="external" className='social-media__external-image'/>
+                            <img src='../../images/external.png' alt="external" className='social-media__external-image' />
                         </div>
                     </div>
 
@@ -144,7 +148,7 @@ function Home() {
                         </div>
                         <div className='social-media__face social-media__face__back'>
                             <p className='typo-from'>Go To URL</p>
-                            <img src='../../images/external.png' alt="external" className='social-media__external-image'/>
+                            <img src='../../images/external.png' alt="external" className='social-media__external-image' />
                         </div>
                     </div>
 
@@ -157,7 +161,7 @@ function Home() {
                         </div>
                         <div className='social-media__face social-media__face__back'>
                             <p className='typo-from'>Go To URL</p>
-                            <img src='../../images/external.png' alt="external" className='social-media__external-image'/>
+                            <img src='../../images/external.png' alt="external" className='social-media__external-image' />
                         </div>
                     </div>
 
@@ -166,7 +170,7 @@ function Home() {
                 </section>
                 <section id='about' className='section section__2'>
                     <div className='section__box2'>
-                        <div className='row spaced'>
+                        <div className='row spaced about'>
                             <img src='../../images/myimage-bg.png' alt="profile-bg" className='myimage myimage__bg' />
                             <div className='centered'>
                                 <h1 className='typo-from typo-from__title typo-from__title__2'>FULL STACK DEVELOPER CURRENTLY BASED IN TUNISIA. </h1>

@@ -1,0 +1,53 @@
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0.5;
+}
+
+#bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.giphy-embed {
+  pointer-events: none;
+  transform: rotateY(180deg);
+}
+
+.about {
+  position: relative;
+  padding: 1rem 10rem;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.about::before,
+.about::after {
+  content: '';
+  position: absolute;
+  width: 0.25rem;
+  height: 100%;
+  background: $color-primary; /* Shadow color */
+  box-shadow: 0 0 5px $color-secondary,
+              0 0 10px $color-secondary,
+              0 0 20px $color-secondary,
+}
+
+.about::after {
+  right: 0;
+}
+
+.about::before {
+  left: 0;
+}
+
+.about::before,
+.about::after {
+  top: 0;
+  z-index: -1;
+}

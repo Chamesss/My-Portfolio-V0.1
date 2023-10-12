@@ -35,10 +35,13 @@
     }
 
     &__hire-button {
-        border: 0.2rem solid $color-white;
         padding: 0.75rem 1.25rem;
+        outline: none;
+        border: none;
+        border-radius: 25px;
         margin-left: 3rem;
-        background-color: transparent;
+        background-color: $color-secondary;
+        box-shadow: 0 0 20px rgba($color-secondary, 1);
         font-size: 2rem;
         font-family: inherit;
         margin: 0.75rem 1.25rem;

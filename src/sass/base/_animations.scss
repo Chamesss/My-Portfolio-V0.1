@@ -45,3 +45,25 @@
         opacity: 1;
     }
 }
+
+@keyframes neonGlow {
+    0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #00c7ff;
+    }
+
+    100% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #ff005e;
+    }
+
+}
+
+@keyframes neonGlow-box {
+    0% {
+        box-shadow: 0 0 5px #fff, 0 0 10px #00c7ff;
+    }
+
+    100% {
+        box-shadow: 0 0 5px #fff, 0 0 10px #ff005e;
+    }
+
+}
