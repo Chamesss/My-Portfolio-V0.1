@@ -1,6 +1,10 @@
 .section {
     width: 100%;
     backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 
     &__1 {
         background-image: linear-gradient(100deg,
@@ -15,18 +19,23 @@
     }
 
     &__box1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin: auto;
         padding: 3rem 15rem;
         height: 100%;
         position: relative;
+        border: 1px solid red;
     }
 
     &__box2 {
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        width: 100%;
         gap: 10rem;
         padding: 10rem 15rem 5rem 15rem;
-
     }
 }

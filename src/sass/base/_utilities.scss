@@ -14,6 +14,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    &__absolute {
+        position: absolute;
+        top: -50px;
+        left: 30px;
+    }
 }
 
 .spaced {
