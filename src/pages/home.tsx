@@ -87,7 +87,7 @@ function Home() {
             <main className='relative'>
                 <header className={`header typo-from typo-from__header${isHeaderFixed ? ' sticky' : ' '}`}>
                     <div>
-                        <span className='typo-from__header-title'>Chams</span>
+                        <span className='typo-from'>Chams</span>
                     </div>
                     <div className='typo-from__options'>
                         <a href='#home' onClick={(e) => handleScroll('top', e)} className='header-option'>Home</a>
@@ -98,22 +98,18 @@ function Home() {
                 </header>
                 <section className='section section__1'>
                     <div className='video-container'>
-                        <video autoPlay muted loop id="video-bg">
-                            <source src='../../images/retro.mp4' type='video/mp4' />
+                        {/* <video autoPlay muted loop id="video-bg">
+                            <source src='../../images/stars.mp4' type='video/mp4' />
                             Your browser does not support the video tag.
-                        </video>
+                        </video> */}
                     </div>
                     <div className='section__box1'>
-                        <div className='text-start'>
-                            <svg width="800" height="auto">
-                                <text x="10" y="60" className="outlined-text">FULLSTACK</text>
-                            </svg>
-                        </div>
-                        <div className='text-end'>
-                            <svg width="800" height="auto">
-                                <text x="10" y="50" className="outlined-text">DEVELOPER</text>
-                            </svg>
-                        </div>
+                        <svg className='svg'>
+                            <text className="outlined-text outlined-text__full">FULLSTACK</text>
+                        </svg>
+                        <svg className='svg'>
+                            <text className="outlined-text outlined-text__dev">DEVELOPER</text>
+                        </svg>
 
                         {/* <div>
                             <h1 className='typo-from typo-from__subtitle'>Howdy !</h1>
@@ -244,7 +240,6 @@ function Home() {
                                 </div>
                             </div>
                         </div>
-                        <div className='line'></div>
                         <div className='centered'>
                             <h1 className='typo-from typo-from__title typo-from__title__2'>Let’s Start by Saying Hi!</h1>
                             <span className='header-option__hire-button'>Contact Me</span>

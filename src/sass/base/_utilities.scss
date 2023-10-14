@@ -80,16 +80,8 @@
     }
 }
 
-.text-start {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid red;
-}
 
-.text-end {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    border: 1px solid blue;;
+.svg {
+    width: 900px;
+    height: auto;
 }
