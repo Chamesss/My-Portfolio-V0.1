@@ -6,8 +6,8 @@
   width: 100%;
   height: 100%;
   opacity: 0.2;
- // background: url(./../../../public/images/slow.gif);
-  //  background-size: cover;
+  background: url(./../../../public/images/slow.gif);
+  background-size: cover;
 }
 
 #video-bg {
@@ -75,13 +75,15 @@
   fill: transparent;
   stroke-width: 2px;
   font-family: 'Audiowide', sans-serif;
+
   &__full {
     stroke: $color-secondary;
     text-shadow: 0 0 5px $color-secondary, 0 0 10px $color-secondary;
     transform: translate(50px, 120px);
   }
+
   &__dev {
-    stroke: $color-primary; 
+    stroke: $color-primary;
     text-shadow: 0 0 5px $color-primary, 0 0 10px $color-primary;
     transform: translate(250px, 80px);
   }
