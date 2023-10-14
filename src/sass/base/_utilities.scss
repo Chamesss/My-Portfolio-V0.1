@@ -55,3 +55,41 @@
 .relative {
     position: relative;
 }
+
+.color {
+    &__blue {
+        color: #463191
+    }
+    &__pink {
+        color: #E72696
+    }
+    &__yellow {
+        color: #FACF31
+    }
+    &__orange {
+        color: #F99B1D
+    }
+    &__greencyan {
+        color: #5EDBA5
+    }
+}
+
+.line-height {
+    &__small {
+        line-height: 0.9;
+    }
+}
+
+.text-start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+}
+
+.text-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border: 1px solid blue;;
+}

@@ -94,21 +94,35 @@ function Home() {
                         <a href='#about' onClick={(e) => handleScroll('about', e)} className='header-option'>About</a>
                         <a href='#services' onClick={(e) => handleScroll('services', e)} className='header-option'>Services</a>
                         <button className='header-option__hire-button' onClick={openModal}>Contact Me</button>
-                        {/*<iframe src="https://giphy.com/embed/FnTOtJeHpmrGlQPxrs" width="50" height="30" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>   */}
                     </div>
                 </header>
                 <section className='section section__1'>
+                    <div className='video-container'>
+                        <video autoPlay muted loop id="video-bg">
+                            <source src='../../images/retro.mp4' type='video/mp4' />
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                     <div className='section__box1'>
-                        <div>
-                            <h1 className='typo-from'>I'm ChamseDin Azouz.</h1>
-                            <h2 className='typo-from typo-from__subtitle'>Full Stack Developer</h2>
+                        <div className='text-start'>
+                            <svg width="800" height="auto">
+                                <text x="10" y="60" className="outlined-text">FULLSTACK</text>
+                            </svg>
+                        </div>
+                        <div className='text-end'>
+                            <svg width="800" height="auto">
+                                <text x="10" y="50" className="outlined-text">DEVELOPER</text>
+                            </svg>
+                        </div>
+
+                        {/* <div>
+                            <h1 className='typo-from typo-from__subtitle'>Howdy !</h1>
+                            <span className='typo-from typo-from__subtitle'>My name is <span className='typo-from typo-from__title'>ChamseDin Azouz</span>.</span>
+                            <h2 className='typo-from typo-from__subtitle'>And I'm a Fullstack Developer & Software Engineering student</h2>
                         </div>
                         <div>
                             <img src='../../images/myimage.png' alt='profile' className='myimage myimage__profile' />
-                        </div>
-                        {/*<span className='typo-from typo-from__sided'>
-                             <iframe src="https://giphy.com/embed/wmipEZyArvXgl1Zn01" width="200" height="200" frameBorder="0" className="giphy-embed" allowFullScreen></iframe> 
-                        </span> */}
+                        </div> */}
                     </div>
                 </section>
 
@@ -292,7 +306,7 @@ function Home() {
                 </div>
 
             </main>
-        </div>
+        </div >
     );
 }
 

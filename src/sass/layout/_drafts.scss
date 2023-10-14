@@ -1,14 +1,14 @@
 .video-container {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
-#bg-video {
+#video-bg {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -51,10 +51,8 @@
 }
 
 .first-box {
-
   clip-path: polygon(22% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 10%, 22% 10%);
   padding: 0.5rem 0.5rem;
-
 }
 
 
@@ -62,4 +60,16 @@
   width: 70px;
   filter: drop-shadow(0 0 10px $color-secondary);
   z-index: 99999999999999999999;
+}
+
+.transparent-text {
+  color: transparent;
+  text-shadow: none;
+}
+
+.outlined-text {
+  font-size: 7rem; /* Adjust the font size as needed */
+  fill: transparent;
+  stroke: red; /* Use the desired outline color */
+  stroke-width: 2px; /* Adjust the outline thickness as needed */
 }
