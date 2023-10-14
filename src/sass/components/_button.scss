@@ -7,4 +7,40 @@
     color: $color-white;
     font-family: inherit;
     cursor: pointer;
+
+    &__download-cv {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 2rem;
+        outline: none;
+        border: 0.2rem solid $color-primary;
+        border-radius: 5rem;
+        background-color: transparent;
+        color: $color-primary;
+        box-shadow: inset 0 0 2px $color-primary, 0 0 4px $color-primary;
+        text-shadow: 0 0 2px $color-primary, 0 0 2px $color-primary;
+        font-family: 'Press Start 2P', sans-serif;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: inset 0 0 8px $color-primary, 0 0 4px $color-primary, 0 0 8px $color-secondary;
+            text-shadow: 0 0 4px $color-primary, 0 0 4px $color-secondary;
+
+            &:hover .animation-rotate {
+                //color: red;
+                animation: rotate 3s infinite linear;
+                text-shadow: 0 0 2px $color-primary, 0 0 4px $color-primary;
+            }
+        }
+    }
+}
+
+
+.animation-rotate {
+    position: absolute;
+    font-size: 2.2rem;
+    text-shadow: 0 0 4px $color-primary, 0 0 2px $color-primary;
 }
