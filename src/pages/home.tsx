@@ -1,11 +1,13 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { FiArrowDownCircle } from '@react-icons/all-files/fi/FiArrowDownCircle';
+import { AiOutlineMail } from '@react-icons/all-files/ai/AiOutlineMail';
 
 function Home() {
 
     const [isHeaderFixed, setIsHeaderFixed] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const modalEl = useRef<HTMLDivElement | null>(null);
+
 
     useEffect(() => {
         const handleScroll = () => {
@@ -94,7 +96,8 @@ function Home() {
                         <a href='#home' onClick={(e) => handleScroll('top', e)} className='header-option'>Home</a>
                         <a href='#about' onClick={(e) => handleScroll('about', e)} className='header-option'>About</a>
                         <a href='#services' onClick={(e) => handleScroll('services', e)} className='header-option'>Services</a>
-                        <button className='header-option__hire-button' onClick={openModal}>Contact Me</button>
+                        <button className='header-option__hire-button' onClick={openModal}>
+                            <span className='animation-rotate animation-rotate__header'><AiOutlineMail /></span> &nbsp; &nbsp;Contact Me</button>
                     </div>
                 </header>
                 <section className='section section__1'>
@@ -110,12 +113,12 @@ function Home() {
                                 <text className="outlined-text outlined-text__full">F<tspan className='animation-flash'>U</tspan>LLSTACK</text>
                             </svg>
                             <svg className='svg'>
-                                <text className="outlined-text outlined-text__dev">DEVELOPER</text>
+                                <text className="outlined-text outlined-text__dev">DEVEL<tspan className='animation-flash-o'>O</tspan>PER</text>
                             </svg>
                         </div>
                         <div className='section__box1__button'>
                             <button className='button__download-cv'>
-                                <span className='animation-rotate'>
+                                <span className='animation-rotate animation-rotate__cv'>
                                     <FiArrowDownCircle />
                                 </span> &nbsp; &nbsp;Download CV
                             </button>
@@ -186,11 +189,32 @@ function Home() {
                             <img src='../../images/external.png' alt="external" className='social-media__external-image' />
                         </div>
                     </div>
-
-
-
                 </section>
+
+
+
+
+
+
+
+
+
                 <section id='about' className='section section__2'>
+
+
+                    <div className='level-1'>
+                        <div className='level-1__container'>
+                            <div className='level-1__image-container'>
+                                <img src='../../images/myimage.png' alt='myimage' className='level-1__myimage' />
+                            </div>
+                            <div className='level-1__dialogue-box'>
+                                <span className='level-1__dialogue-text' >
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+
                     <div className='section__box2'>
                         <div className='container'>
                             <div className='center center__absolute'>

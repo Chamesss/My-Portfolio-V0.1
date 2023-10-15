@@ -1,3 +1,5 @@
+@import 'typed';
+
 .video-container {
   position: absolute;
   top: 0;
@@ -81,7 +83,7 @@
     text-shadow: 0 0 5px $color-secondary, 0 0 10px $color-secondary;
     transform: translate(50px, 120px);
 
-    
+
   }
 
   &__dev {
@@ -92,5 +94,85 @@
 }
 
 .animation-flash {
-  animation: lightningFlash 3s alternate infinite; 
+  animation: lightningFlash 3s alternate infinite;
+}
+
+.animation-flash-o {
+  animation: lightningFlash-o 3s linear infinite;
+}
+
+
+
+//section levels 
+
+.level-1 {
+  background-image: url(./../../../public/images/level-1.gif);
+  background-size: cover;
+  width: 80%;
+  height: 600px;
+  padding: 5rem 5rem;
+
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image-container {
+    position: absolute;
+    left: 0;
+    bottom: 17%;
+    width: 25%;
+  }
+
+  &__myimage {
+    width: 100%;
+    height: auto;
+  }
+
+  &__dialogue-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    background-color: rgba($color-black, 0.75);
+    color: $color-white;
+    bottom: 0;
+    border-radius: 0.5rem;
+    min-height: 120px;
+    outline: 2px solid #FACF31;
+    padding: 1rem 3rem;
+  }
+
+  &__dialogue-text {
+    display: block;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    pointer-events: none;
+    @include typed (
+      "nik om css w nik om om l front end w om 7ayeti l9a7ba lmnayka.. ama im leveling up m3a kol struggeling to3rodhni and i'm proud of that, s7i7 thnia mizelet twila ama im happy with my position :)",
+      1.5,
+      (
+        caret-width: 2px,
+        caret-space: 2px
+      )
+    );
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
 }

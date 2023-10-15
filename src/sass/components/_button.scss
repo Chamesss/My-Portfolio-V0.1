@@ -42,7 +42,15 @@
 .animation-rotate {
     position: absolute;
     font-size: 2.2rem;
-    text-shadow: 0 0 10px $color-primary, 0 0 2px $color-primary;
-    filter: drop-shadow(0 0 4px $color-primary);
+    
+    &__cv {
+        text-shadow: 0 0 10px $color-primary, 0 0 2px $color-primary;
+        filter: drop-shadow(0 0 4px $color-primary);
+    }
+
+    &__header {
+        text-shadow: 0 0 10px $color-secondary, 0 0 2px $color-secondary;
+        filter: drop-shadow(0 0 4px $color-secondary);
+    }
 
 }
