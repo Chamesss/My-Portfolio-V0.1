@@ -107,7 +107,7 @@ function Home() {
                     <div className='section__box1'>
                         <div className='section__box1__svg'>
                             <svg className='svg'>
-                                <text className="outlined-text outlined-text__full">FULLSTACK</text>
+                                <text className="outlined-text outlined-text__full">F<tspan className='animation-flash'>U</tspan>LLSTACK</text>
                             </svg>
                             <svg className='svg'>
                                 <text className="outlined-text outlined-text__dev">DEVELOPER</text>
