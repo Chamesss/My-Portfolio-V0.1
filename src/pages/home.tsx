@@ -201,6 +201,8 @@ function Home() {
 
                 <section id='about' className='section section__2'>
 
+                    <h1 className='typo-from typo-from__level-1-title'>Let's Get Started!</h1>
+
 
                     <div className='level-1'>
                         <div className='level-1__container'>
