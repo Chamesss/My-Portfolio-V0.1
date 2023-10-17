@@ -167,3 +167,15 @@
         caret-space: 2px));
   }
 }
+
+.svg-social {
+  cursor: pointer;
+  fill: rgba(255,255,255, 0.7);
+  stroke: transparent;
+  transition: all 0.2s cubic-bezier(.76,.26,.76,.26);
+  &:hover {
+    filter: drop-shadow(0 0 4px $color-primary);
+    fill: $color-primary;
+    scale: 1.1
+  }
+}

@@ -62,16 +62,18 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 0; /* Adjust as needed */
-    left: 3%; /* Adjust as needed */
-    width: 0.5rem;
+    top: 0;
+    left: 0; 
     height: 100%;
-    background-color: black;
+    background-color: transparent;
   }
   
   .fixed {
     position: absolute;
-    padding: 10px;
+    padding: 2.5rem 1.2rem;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    box-shadow: 0 0 2px $color-black;
   }
