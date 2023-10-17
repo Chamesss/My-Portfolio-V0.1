@@ -179,3 +179,10 @@
     scale: 1.1
   }
 }
+
+.svg-email {
+  cursor: pointer;
+  fill: rgba(255,255,255, 0.7);
+  stroke: transparent;
+  transition: all 0.2s cubic-bezier(.76,.26,.76,.26);
+}
