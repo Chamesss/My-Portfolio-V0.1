@@ -9,6 +9,34 @@ function Home() {
     const modalEl = useRef<HTMLDivElement | null>(null);
 
 
+
+    const [scrollPosition, setScrollPosition] = useState(0);
+
+    useEffect(() => {
+        const section = document.getElementById('about');
+
+        if (!section) {
+            return
+        }
+
+        const handleScroll = () => {
+            const maxScroll = section.offsetTop + section.offsetHeight - 40;
+            const currentScroll = window.pageYOffset - section.offsetTop + 20;
+
+            if (currentScroll < maxScroll) {
+                setScrollPosition(currentScroll);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+
+
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
@@ -201,6 +229,15 @@ function Home() {
 
                 <section id='about' className='section section__2'>
 
+
+
+
+                    <div className="line-x" style={{ top: '0', left: '2%' }}>
+                        <div className="fixed" style={{ top: `${scrollPosition + 200}px` }}>
+                            AAA
+                        </div>
+                    </div>
+
                     <h1 className='typo-from typo-from__level-1-title'>Let's Get Started!</h1>
 
 
@@ -219,62 +256,53 @@ function Home() {
 
                     <div className='section__box2'>
                         <div className='container'>
-                            <div className='center center__absolute'>
-                                <img src='../../images/bird.gif' alt="external" className='first-box__gif' />
-                                <img src='../../images/bird.gif' alt="external" className='first-box__gif' />
-                                <img src='../../images/bird.gif' alt="external" className='first-box__gif' />
-                            </div>
-                            <div className='first-box'>
-                                <div className='second-box'>
-                                    <div className='row spaced about'>
-                                        <img src='../../images/myimage-bg.png' alt="profile-bg" className='myimage myimage__bg' />
-                                        <div className='centered'>
-                                            <h1 className='typo-from typo-from__title typo-from__title__2'>FULL STACK DEVELOPER CURRENTLY BASED IN TUNISIA. </h1>
-                                            <p className='typo-from typo-from__subtitle'>Hi ! I'm Chamsedin Azouz, I specialize in the MERN stack, crafting, captivating front-end interfaces and ensuring a robust and efficient backend experience for users.</p>
-                                        </div>
+                            <div className='second-box'>
+                                <div className='row spaced about'>
+                                    <img src='../../images/myimage-bg.png' alt="profile-bg" className='myimage myimage__bg' />
+                                    <div className='centered'>
+                                        <h1 className='typo-from typo-from__title typo-from__title__2'>FULL STACK DEVELOPER CURRENTLY BASED IN TUNISIA. </h1>
+                                        <p className='typo-from typo-from__subtitle'>Hi ! I'm Chamsedin Azouz, I specialize in the MERN stack, crafting, captivating front-end interfaces and ensuring a robust and efficient backend experience for users.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className='first-box'>
-                            <div className='second-box'>
-                                <div className='column spaced about'>
-                                    <div className='centered padding'>
-                                        <h1 className='typo-from typo-from__title typo-from__title__2'>WHAT DO I WORK</h1>
-                                        <p className='typo-from typo-from__subtitle'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <div className='second-box'>
+                            <div className='column spaced about'>
+                                <div className='centered padding'>
+                                    <h1 className='typo-from typo-from__title typo-from__title__2'>WHAT DO I WORK</h1>
+                                    <p className='typo-from typo-from__subtitle'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+                                <div className='row spaced__less center'>
+
+
+                                    <div className='box'>
+                                        <div className='row'>
+                                            <img src='../../images/brands-logo/react.png' alt='react' className='brand-image' />
+                                            <img src='../../images/brands-logo/angular.png' alt='angular' className='brand-image' />
+                                            <img src='../../images/brands-logo/sass.png' alt='sass' className='brand-image' />
+                                        </div>
+                                        <p className='typo-from typo-from__box'>Creation of interactive interfaces</p>
                                     </div>
-                                    <div className='row spaced__less center'>
-
-
-                                        <div className='box'>
-                                            <div className='row'>
-                                                <img src='../../images/brands-logo/react.png' alt='react' className='brand-image' />
-                                                <img src='../../images/brands-logo/angular.png' alt='angular' className='brand-image' />
-                                                <img src='../../images/brands-logo/sass.png' alt='sass' className='brand-image' />
-                                            </div>
-                                            <p className='typo-from typo-from__box'>Creation of interactive interfaces</p>
+                                    <div className='box box__grey'>
+                                        <div className='row'>
+                                            <img src='../../images/brands-logo/node.png' alt='node' className='brand-image' />
+                                            <img src='../../images/brands-logo/express.png' alt='express' className='brand-image' />
                                         </div>
-                                        <div className='box box__grey'>
-                                            <div className='row'>
-                                                <img src='../../images/brands-logo/node.png' alt='node' className='brand-image' />
-                                                <img src='../../images/brands-logo/express.png' alt='express' className='brand-image' />
-                                            </div>
-                                            <p className='typo-from typo-from__box'>Creating solid, functional APIs</p>
-                                        </div>
-                                        <div className='box'>
-                                            <div className='row'>
-                                                <img src='../../images/brands-logo/mongo.png' alt='mongo' className='brand-image' />
-                                            </div>
-                                            <p className='typo-from typo-from__box'>DB optimization & management</p>
-                                        </div>
-                                        <div className='box box__grey'>
-                                            <div className='row'>
-                                                <img src='../../images/brands-logo/azure.png' alt='azure' className='brand-image' />
-                                            </div>
-                                            <p className='typo-from typo-from__box'>Application deployment & scaling</p>
-                                        </div>
-
+                                        <p className='typo-from typo-from__box'>Creating solid, functional APIs</p>
                                     </div>
+                                    <div className='box'>
+                                        <div className='row'>
+                                            <img src='../../images/brands-logo/mongo.png' alt='mongo' className='brand-image' />
+                                        </div>
+                                        <p className='typo-from typo-from__box'>DB optimization & management</p>
+                                    </div>
+                                    <div className='box box__grey'>
+                                        <div className='row'>
+                                            <img src='../../images/brands-logo/azure.png' alt='azure' className='brand-image' />
+                                        </div>
+                                        <p className='typo-from typo-from__box'>Application deployment & scaling</p>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>

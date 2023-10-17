@@ -5,12 +5,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+
 
     &__1 {
         background-image: linear-gradient(100deg,
-        rgba($color-theme-1, 0.5) 40%,
-        rgba($color-theme-2, 0.5) 60%);
+                rgba($color-theme-1, 0.5) 40%,
+                rgba($color-theme-2, 0.5) 60%);
     }
 
     &__2 {
@@ -18,7 +18,9 @@
                 rgba($color-theme-1, 1) 30%,
                 rgba($color-theme-2, 1) 70%);
 
-                padding: 5rem 10rem;
+        padding: 5rem 10rem;
+        position: relative;
+        overflow: auto;
     }
 
     &__box1 {
@@ -28,6 +30,7 @@
         position: relative;
         flex-direction: column;
         width: 100%;
+
         &__svg {
             margin: auto;
             display: flex;
@@ -35,10 +38,11 @@
             justify-content: center;
             flex-direction: column;
         }
+
         &__button {
             display: flex;
             align-self: flex-start;
-            
+
         }
     }
 
@@ -47,8 +51,27 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 100%;
+        width: 80%;
         gap: 10rem;
-        padding: 10rem 15rem 5rem 15rem;
+        margin-top: 7.5rem;
     }
 }
+
+.line-x {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0; /* Adjust as needed */
+    left: 3%; /* Adjust as needed */
+    width: 0.5rem;
+    height: 100%;
+    background-color: black;
+  }
+  
+  .fixed {
+    position: absolute;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
