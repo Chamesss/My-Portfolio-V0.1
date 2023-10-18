@@ -2,9 +2,11 @@
     display: flex;
     position: relative;
     width: 100%;
+    height: 26rem;
 
     &__photo {
-        width: 60%;
+        width: auto;
+        height: 18rem;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
         border-radius: 2px;
         position: absolute;
@@ -44,6 +46,9 @@
 }
 
 .flex {
+    display: flex;
     flex: 1;
+    justify-content: center;
+    flex-direction: column;
     height: auto;
 }

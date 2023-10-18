@@ -8,7 +8,7 @@
   width: 100%;
   height: 100%;
   opacity: 0.2;
-  background: url(./../../../public/images/slow.gif);
+  //background: url(./../../../public/images/slow.gif);
   background-size: cover;
 }
 
@@ -155,6 +155,7 @@
   &__dialogue-text {
     display: block;
     appearance: none;
+    font-family: 'Press Start 2P', sans-serif;
     width: 100%;
     height: 100%;
     background-color: transparent;
@@ -170,9 +171,10 @@
 
 .svg-social {
   cursor: pointer;
-  fill: rgba(255,255,255, 0.7);
+  fill: rgba(255, 255, 255, 0.7);
   stroke: transparent;
-  transition: all 0.2s cubic-bezier(.76,.26,.76,.26);
+  transition: all 0.2s cubic-bezier(.76, .26, .76, .26);
+
   &:hover {
     filter: drop-shadow(0 0 4px $color-primary);
     fill: $color-primary;
@@ -182,9 +184,9 @@
 
 .svg-email {
   cursor: pointer;
-  fill: rgba(255,255,255, 0.7);
+  fill: rgba(255, 255, 255, 0.7);
   stroke: transparent;
-  transition: all 0.2s cubic-bezier(.76,.26,.76,.26);
+  transition: all 0.2s cubic-bezier(.76, .26, .76, .26);
 }
 
 .grid {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FiArrowDownCircle } from '@react-icons/all-files/fi/FiArrowDownCircle';
 import { AiOutlineMail } from '@react-icons/all-files/ai/AiOutlineMail';
 import { technologies } from '../components/technologies';
@@ -6,11 +6,6 @@ import { technologies } from '../components/technologies';
 function Home() {
 
     const [isHeaderFixed, setIsHeaderFixed] = useState(false);
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const modalEl = useRef<HTMLDivElement | null>(null);
-
-
-
     const [scrollPosition, setScrollPosition] = useState(0);
 
     useEffect(() => {
@@ -47,25 +42,6 @@ function Home() {
         };
     }, []);
 
-    useEffect(() => {
-        const handler = (event: MouseEvent) => {
-            if (!modalEl.current) {
-                return;
-            }
-
-            if (event.target && !modalEl.current.contains(event.target as Node) && isModalOpen) {
-                console.log('this is useeffect intefering :p');
-                setIsModalOpen(false);
-                closeModal();
-            }
-        };
-
-        document.addEventListener("click", handler, true);
-        return () => {
-            document.removeEventListener("click", handler);
-        };
-    }, [isModalOpen]);
-
 
     const handleScroll = (id: string, event: React.MouseEvent) => {
         event.preventDefault();
@@ -79,38 +55,6 @@ function Home() {
         }
     };
 
-    const openModal = () => {
-        const modalElement = document.getElementById("myModal");
-        if (modalElement) {
-            modalElement.style.display = "block";
-            const overlay = document.getElementById("overlay");
-            if (overlay) {
-                overlay.style.display = "block";
-            }
-        }
-        setIsModalOpen(true);
-    }
-
-
-    const closeModal = () => {
-        const modalElement = document.getElementById("myModal");
-        const modal = document.querySelector('.modal');
-        const overlay = document.getElementById("overlay");
-
-        if (modal && overlay && modalElement) {
-            modal.classList.add('modal__modal-closing');
-
-            setTimeout(() => {
-                modalElement.style.display = "none";
-                overlay.style.display = "none";
-                modal.classList.remove('modal__modal-closing');
-            }, 500);
-        }
-
-        setIsModalOpen(false);
-    };
-
-
     return (
         <div >
             <main className='relative'>
@@ -122,8 +66,9 @@ function Home() {
                         <a href='#home' onClick={(e) => handleScroll('top', e)} className='header-option'>Home</a>
                         <a href='#about' onClick={(e) => handleScroll('about', e)} className='header-option'>About</a>
                         <a href='#services' onClick={(e) => handleScroll('services', e)} className='header-option'>Services</a>
-                        <button className='header-option__hire-button' onClick={openModal}>
-                            <span className='animation-rotate animation-rotate__header'><AiOutlineMail /></span> &nbsp; &nbsp;Contact Me</button>
+                        <button className='header-option__hire-button'>
+                            <span className='animation-rotate animation-rotate__header'><AiOutlineMail /></span> &nbsp; &nbsp;Contact Me
+                        </button>
                     </div>
                 </header>
                 <section className='section section__1'>
@@ -217,16 +162,7 @@ function Home() {
                     </div>
                 </section>
 
-
-
-
-
-
-
-
-
                 <section id='about' className='section section__2'>
-
                     <div className="line line__x">
                         <div className="fixed fixed__x" style={{ top: `50%`, transform: `translateY(-50%) translateX(50%)`, marginTop: `${scrollPosition}px` }}>
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 50 50" style={{ marginBottom: '10px' }} className='svg-social'>
@@ -269,8 +205,8 @@ function Home() {
                         </div>
                     </div>
 
-                    <section className='section__tools'>
-                        <h1 className='typo-from typo-from__title'>Tools That I Use :</h1>
+                    <section id='services' className='section__tools'>
+                        <h1 className='typo-from typo-from__title'>TOOLS THAT I USE :</h1>
                         <div className='grid'>
                             {technologies.map((tech, index) => (
                                 <div
@@ -286,20 +222,13 @@ function Home() {
                         </div>
                     </section>
 
-
-
-
-                    <section className="section__captures">
-                        <h1 className='typo-from typo-from__title'>Tools That I Use :</h1>
+                    <section  className="section__captures">
+                        <h1 className='typo-from typo-from__title'>WHAT DO I WORK :</h1>
                         <div className='section__flexing grid'>
                             <div className='flex'>
-                                <h1 className="typo-from">You're going to fall in love with nature</h1>
                                 <p className="typo-from">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur
-                                    libero repellat quis consequatur
-                                    ducimus quam nisi exercitationem omnis earum qui.
+                                    My main focus is on making stunning and efficient web experiences that users love. I'm constantly learning and improving, blending design and tech know-how to create innovative solutions. My goal is to craft web applications that look great, work seamlessly, and leave a lasting impression on users.
                                 </p>
-                                <a href="#null" className="btn-text">Learn more &rarr;</a>
                             </div>
                             <div className='flex'>
                                 <div className='composition'>
@@ -314,62 +243,12 @@ function Home() {
                         </div>
                     </section>
 
-
                     <div className='section__box2'>
-                        <div className='container'>
-                            <div className='second-box'>
-                                <div className='row spaced about'>
-                                    <img src='../../images/myimage-bg.png' alt="profile-bg" className='myimage myimage__bg' />
-                                    <div className='centered'>
-                                        <h1 className='typo-from typo-from__title typo-from__title__2'>FULL STACK DEVELOPER CURRENTLY BASED IN TUNISIA. </h1>
-                                        <p className='typo-from typo-from__subtitle'>Hi ! I'm Chamsedin Azouz, I specialize in the MERN stack, crafting, captivating front-end interfaces and ensuring a robust and efficient backend experience for users.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='second-box'>
-                            <div className='column spaced about'>
-                                <div className='centered padding'>
-                                    <h1 className='typo-from typo-from__title typo-from__title__2'>WHAT DO I WORK</h1>
-                                    <p className='typo-from typo-from__subtitle'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                </div>
-                                <div className='row spaced__less center'>
-
-
-                                    <div className='box'>
-                                        <div className='row'>
-                                            <img src='../../images/brands-logo/react.png' alt='react' className='brand-image' />
-                                            <img src='../../images/brands-logo/angular.png' alt='angular' className='brand-image' />
-                                            <img src='../../images/brands-logo/sass.png' alt='sass' className='brand-image' />
-                                        </div>
-                                        <p className='typo-from typo-from__box'>Creation of interactive interfaces</p>
-                                    </div>
-                                    <div className='box box__grey'>
-                                        <div className='row'>
-                                            <img src='../../images/brands-logo/node.png' alt='node' className='brand-image' />
-                                            <img src='../../images/brands-logo/express.png' alt='express' className='brand-image' />
-                                        </div>
-                                        <p className='typo-from typo-from__box'>Creating solid, functional APIs</p>
-                                    </div>
-                                    <div className='box'>
-                                        <div className='row'>
-                                            <img src='../../images/brands-logo/mongo.png' alt='mongo' className='brand-image' />
-                                        </div>
-                                        <p className='typo-from typo-from__box'>DB optimization & management</p>
-                                    </div>
-                                    <div className='box box__grey'>
-                                        <div className='row'>
-                                            <img src='../../images/brands-logo/azure.png' alt='azure' className='brand-image' />
-                                        </div>
-                                        <p className='typo-from typo-from__box'>Application deployment & scaling</p>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
                         <div className='centered'>
-                            <h1 className='typo-from typo-from__title typo-from__title__2'>Let’s Start by Saying Hi!</h1>
-                            <span className='header-option__hire-button'>Contact Me</span>
+                            <h1 className='typo-from typo-from__title typo-from__title__2'>Feel Free To Reach Out!</h1>
+                            <button className='header-option__hire-button'>
+                                <span className='animation-rotate animation-rotate__header'><AiOutlineMail /></span> &nbsp; &nbsp;Contact Me
+                            </button>
                         </div>
                         <footer>
                             <div className='space-between'>
@@ -392,40 +271,6 @@ function Home() {
                         </footer>
                     </div>
                 </section>
-
-                {/* Overlay */}
-                {isModalOpen && <div id="overlay" className="overlay"></div>}
-
-                {/* Modal */}
-                <div id="myModal" className="modal" ref={modalEl}>
-                    <div className="modal__content">
-                        <button className="modal__close" onClick={closeModal}>
-                            &times;
-                        </button>
-                        <div className='modal__main row padding__extra spaced__more'>
-                            <div className='modal__info column'>
-                                <p className='typo-from typo-from__title typo-from__title__2 typo-from__title__2__pop-up'>Contact Me</p>
-                                <div>
-                                    <div className='centered centered__non-gap row'>
-                                        <img className='modal__image' src='../../images/email.png' alt='email' />
-                                        <p className='typo-from typo-from__modal'>chamsedin.azouz@gmail.com</p>
-                                    </div>
-                                    <div className='centered centered__non-gap row'>
-                                        <img className='modal__image' src='../../images/phone.png' alt='phone' />
-                                        <p className='typo-from typo-from__modal'>+216 92448974</p>
-                                    </div>
-                                </div>
-                                <button className='button'>Download cv</button>
-                            </div>
-                            <div className='modal__input column'>
-                                <input className='input' placeholder='Your name' />
-                                <input className='input' placeholder='Your email' />
-                                <textarea className='input input__message' placeholder='Your message' />
-                                <button className='button'>Send</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             </main>
         </div >
