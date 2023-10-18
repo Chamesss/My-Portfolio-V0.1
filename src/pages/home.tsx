@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { FiArrowDownCircle } from '@react-icons/all-files/fi/FiArrowDownCircle';
 import { AiOutlineMail } from '@react-icons/all-files/ai/AiOutlineMail';
+import { technologies } from '../components/technologies';
 
 function Home() {
 
@@ -115,7 +116,7 @@ function Home() {
             <main className='relative'>
                 <header className={`header typo-from typo-from__header${isHeaderFixed ? ' sticky' : ' '}`}>
                     <div>
-                        <span className='typo-from'>Chams</span>
+                        <span className='typo-from typo-from__header'>Chams</span>
                     </div>
                     <div className='typo-from__options'>
                         <a href='#home' onClick={(e) => handleScroll('top', e)} className='header-option'>Home</a>
@@ -256,8 +257,6 @@ function Home() {
                     </div>
 
                     <h1 className='typo-from typo-from__level-1-title'>Let's Get Started!</h1>
-
-
                     <div className='level-1'>
                         <div className='level-1__container'>
                             <div className='level-1__image-container'>
@@ -269,6 +268,23 @@ function Home() {
                             </div>
                         </div>
                     </div>
+
+                    <section className='section__tools'>
+                        <h1 className='typo-from typo-from__title'>Tools That I Use :</h1>
+                        <div className='grid'>
+                            {technologies.map((tech, index) => (
+                                <div
+                                    key={index}
+                                    className='technology-box'
+                                    style={{ backgroundColor: tech.color }}
+                                >
+                                    <p className='technology-text' style={{color: tech.pcolor, fontSize:'1rem'}}>{tech.technology}&nbsp;</p>
+                                    <div dangerouslySetInnerHTML={{ __html: tech.svg }} className='svg-container'/>
+
+                                </div>
+                            ))}
+                        </div>
+                    </section>
 
 
                     <div className='section__box2'>

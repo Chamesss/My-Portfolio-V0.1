@@ -7,6 +7,11 @@
     flex-direction: column;
 
 
+    &__tools {
+        margin-top: 10rem;
+    }
+
+
     &__1 {
         background-image: linear-gradient(100deg,
                 rgba($color-theme-1, 0.5) 40%,
@@ -113,4 +118,6 @@
 
 .email-text {
     transition: all 0.2s cubic-bezier(.76,.26,.76,.26);
+    font-family: 'Audiowide', sans-serif;
+    font-size: 1.5rem;
 }

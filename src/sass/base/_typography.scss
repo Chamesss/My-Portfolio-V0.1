@@ -12,6 +12,8 @@ body {
 
     &__header {
         font-weight: 400;
+        font-family: 'Audiowide', sans-serif;
+        font-size: 2rem;
 
         &-title {
             animation: neonGlow 2s infinite alternate;
@@ -44,12 +46,10 @@ body {
     }
 
     &__title {
-        //font-family: 'Neonderthaw', cursive;
-        //font-size: 7rem;
+        font-family: 'Audiowide', sans-serif;
+        font-size: 3rem;
         font-weight: 700;
-        text-align: center;
         opacity: 1;
-        text-shadow: 0 0 20px rgba($color-primary, 1);
         //animation: simpleFadeIn 0.5s 0.75s forwards;
 
 
