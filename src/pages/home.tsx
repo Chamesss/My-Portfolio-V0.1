@@ -278,11 +278,39 @@ function Home() {
                                     className='technology-box'
                                     style={{ backgroundColor: tech.color }}
                                 >
-                                    <p className='technology-text' style={{color: tech.pcolor, fontSize:'1rem'}}>{tech.technology}&nbsp;</p>
-                                    <div dangerouslySetInnerHTML={{ __html: tech.svg }} className='svg-container'/>
+                                    <p className='technology-text' style={{ color: tech.pcolor, fontSize: '1rem' }}>{tech.technology}&nbsp;</p>
+                                    <div dangerouslySetInnerHTML={{ __html: tech.svg }} className='svg-container' />
 
                                 </div>
                             ))}
+                        </div>
+                    </section>
+
+
+
+
+                    <section className="section__captures">
+                        <h1 className='typo-from typo-from__title'>Tools That I Use :</h1>
+                        <div className='section__flexing grid'>
+                            <div className='flex'>
+                                <h1 className="typo-from">You're going to fall in love with nature</h1>
+                                <p className="typo-from">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur
+                                    libero repellat quis consequatur
+                                    ducimus quam nisi exercitationem omnis earum qui.
+                                </p>
+                                <a href="#null" className="btn-text">Learn more &rarr;</a>
+                            </div>
+                            <div className='flex'>
+                                <div className='composition'>
+                                    <div className='centered'>
+
+                                        <img alt="capture-1" className="composition__photo composition__photo--p1" src="../../images/captures/final.png" />
+                                        <img alt="capture-2" className="composition__photo composition__photo--p2" src="../../images/captures/final-2.png" />
+                                        <img alt="capture-3" className="composition__photo composition__photo--p3" src="../../images/captures/final-3.png" />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </section>
 
