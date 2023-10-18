@@ -151,9 +151,9 @@ function Home() {
                     <div className='social-media__container' onClick={() => window.open("https://www.instagram.com/chamess_azzouz/", '_blank')}>
                         <div className='social-media__face social-media__face__front'>
                             <a href='#null' className='social-media__section'>
-                                <img src='../../images/instagram0.png' alt='instagram' className='social-media__image' />
+                                <img src='../../images/whatsapp.png' alt='whatsapp' className='social-media__image' />
                             </a>
-                            <span className='typo-from typo-from__social'>Instagram</span>
+                            <span className='typo-from typo-from__social'>Whatsapp</span>
                         </div>
                         <div className='social-media__face social-media__face__back'>
                             <p className='typo-from'>Go To URL</p>
@@ -263,7 +263,7 @@ function Home() {
                                         <img src='../../images/facebook1.png' alt='facebook' className='social-media__footer' />
                                     </a>
                                     <a href='#null' className='social-media__section' onClick={() => window.open("https://www.instagram.com/chamess_azzouz/", '_blank')}>
-                                        <img src='../../images/instagram0.png' alt='instagram' className='social-media__footer' />
+                                        <img src='../../images/whatsapp.png' alt='whatsapp' className='social-media__footer' />
                                     </a>
                                 </div>
                                 <span className='typo-from typo-from__footer'>Created by <span className='typo-from__footer__name'>Chamsedin Azouz</span> | Copyright &copy; 2023 All rights reserved</span>
