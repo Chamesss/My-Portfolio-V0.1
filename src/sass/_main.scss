@@ -7,19 +7,16 @@
 
 @import "layout/header";
 @import "layout/social-section";
-@import "layout/rowXcolumn";
-@import "layout/drafts";
-@import "layout/typed.scss";
 
 @import "pages/home";
 
 @import "components/header-option";
 @import "components/myimage";
-@import "components/line";
-@import "components/box";
-@import "components/brand-image";
-@import "components/modal";
-@import "components/input";
 @import "components/button";
-@import "components/card";
 @import "components/composition";
+@import "components/level-1";
+@import "components/typed.scss";
+@import "components/banner-title";
+@import "components/technology-box";
+@import "components/svgs";
+@import "components/fixed-info";

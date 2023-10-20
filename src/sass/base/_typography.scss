@@ -14,35 +14,12 @@ body {
         font-weight: 400;
         font-family: 'Audiowide', sans-serif;
         font-size: 2rem;
-
-        &-title {
-            animation: neonGlow 2s infinite alternate;
-            color: $color-white;
-        }
     }
 
     &__options {
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-
-    &__name {
-        font-size: 3rem;
-        text-shadow: 0 0 20px rgba(#FACF31, 1);
-    }
-
-    &__fullstack {
-        color: $color-primary;
-        font-size: 2.5rem;
-        text-shadow: 0 0 20px rgba($color-primary, 1);
-    }
-
-    &__student {
-        color: $color-secondary;
-        font-size: 2.5rem;
-        text-shadow: 0 0 20px rgba($color-secondary, 1);
-        text-align: end;
     }
 
     &__title {
@@ -53,20 +30,9 @@ body {
         text-shadow: 0 0 4px rgba($color-black, 1);
         //animation: simpleFadeIn 0.5s 0.75s forwards;
 
-
-        &__glowing {
-            animation: textPulse 1.5s infinite alternate;
-        }
-
         &__2 {
             padding-top: 0rem;
             font-size: 2rem;
-
-            &__pop-up {
-                line-height: 1;
-                letter-spacing: 0.2rem;
-                font-family: 'Tilt Neon', sans-serif;
-            }
         }
     }
 
@@ -78,25 +44,9 @@ body {
         animation: rightInvade 0.5s 1.25s forwards;
     }
 
-    &__sided {
-        position: absolute;
-        transform: translateX(-50%) translateY(-50%);
-        top: 50%;
-        left: 20%;
-    }
-
     &__social {
         color: rgba($color-white, 0.7);
         font-size: 1rem;
-    }
-
-    &__box {
-        margin-top: 1rem;
-        text-align: center;
-        color: rgba($color-black, 0.7);
-        font-family: 'Tilt Neon', sans-serif;
-        font-weight: 700;
-        font-size: 1.5rem;
     }
 
     &__footer {
@@ -110,11 +60,6 @@ body {
         }
     }
 
-    &__modal {
-        font-size: 1.5rem;
-        line-height: 3.5rem;
-    }
-
     &__level-1-title {
         margin-top: 0.5rem;
         padding: 0.75rem 2.5rem;
@@ -124,14 +69,5 @@ body {
         animation: flashing .5s infinite alternate;
         background-color:  $color-theme-2-dark;
         font-family: 'Press Start 2P', sans-serif;
-    }
-}
-
-@keyframes flashing {
-    0%, 50%{
-        color: transparent;
-    }
-    51%,100% {
-        color: $color-white;
     }
 }

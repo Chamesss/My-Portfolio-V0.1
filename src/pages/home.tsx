@@ -224,7 +224,7 @@ function Home() {
 
                     <section  className="section__captures">
                         <h1 className='typo-from typo-from__title'>WHAT DO I WORK :</h1>
-                        <div className='section__flexing grid'>
+                        <div className='section__flexing'>
                             <div className='flex'>
                                 <p className="typo-from">
                                     My main focus is on making stunning and efficient web experiences that users love. I'm constantly learning and improving, blending design and tech know-how to create innovative solutions. My goal is to craft web applications that look great, work seamlessly, and leave a lasting impression on users.
@@ -233,7 +233,6 @@ function Home() {
                             <div className='flex'>
                                 <div className='composition'>
                                     <div className='centered'>
-
                                         <img alt="capture-1" className="composition__photo composition__photo--p1" src="../../images/captures/final.png" />
                                         <img alt="capture-2" className="composition__photo composition__photo--p2" src="../../images/captures/final-2.png" />
                                         <img alt="capture-3" className="composition__photo composition__photo--p3" src="../../images/captures/final-3.png" />

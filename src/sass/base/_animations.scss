@@ -1,27 +1,3 @@
-@keyframes modalFadeIn {
-    from {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0.8);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-    }
-}
-
-@keyframes modalFadeOut {
-    from {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-    }
-
-    to {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0.8);
-    }
-}
-
 @keyframes simpleFadeIn {
     from {
         opacity: 0;
@@ -44,28 +20,6 @@
         transform: translateX(0);
         opacity: 1;
     }
-}
-
-@keyframes neonGlow {
-    0% {
-        text-shadow: 0 0 5px #fff, 0 0 10px #00c7ff;
-    }
-
-    100% {
-        text-shadow: 0 0 5px #fff, 0 0 10px #ff005e;
-    }
-
-}
-
-@keyframes neonGlow-box {
-    0% {
-        box-shadow: 0 0 5px #fff, 0 0 10px #00c7ff;
-    }
-
-    100% {
-        box-shadow: 0 0 5px #fff, 0 0 10px #ff005e;
-    }
-
 }
 
 @keyframes rotate {
@@ -117,5 +71,14 @@
     79.50% {
         text-shadow: 0 0 0 $color-primary;
         stroke: rgba(45, 45, 45, 0.784);
+    }
+}
+
+@keyframes flashing {
+    0%, 50%{
+        color: transparent;
+    }
+    51%,100% {
+        color: $color-white;
     }
 }

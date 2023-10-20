@@ -1,0 +1,29 @@
+.outlined-text {
+    font-size: 9rem;
+    fill: transparent;
+    stroke-width: 2px;
+    font-family: 'Audiowide', sans-serif;
+  
+    &__full {
+      stroke: $color-secondary;
+      text-shadow: 0 0 5px $color-secondary, 0 0 10px $color-secondary;
+      transform: translate(50px, 120px);
+  
+  
+    }
+  
+    &__dev {
+      stroke: $color-primary;
+      text-shadow: 0 0 5px $color-primary, 0 0 10px $color-primary;
+      transform: translate(250px, 80px);
+    }
+  }
+  
+  .animation-flash {
+    animation: lightningFlash 3s alternate infinite;
+  }
+  
+  .animation-flash-o {
+    animation: lightningFlash-o 3s linear infinite;
+  }
+  

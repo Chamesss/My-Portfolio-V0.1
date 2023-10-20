@@ -1,0 +1,59 @@
+.line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    background-color: transparent;
+
+    &__x {
+        top: 0;
+        left: 0;
+    }
+
+    &__y {
+        top: 0;
+        right: 0;
+    }
+}
+
+.fixed {
+    position: absolute;
+    padding: 2.5rem 1.2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    box-shadow: 0 0 2px $color-black;
+
+    &__x {
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+
+    &__y {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 1.2rem 2.5rem;
+        border-bottom-right-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        rotate: 90deg;
+        background-color: rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+
+        &:hover .svg-email,
+        &:hover .email-text {
+            color: $color-secondary;
+            fill: $color-secondary;
+            filter: drop-shadow(0 0 4px $color-secondary);
+            transform: translateX(-3px);
+        }
+    }
+}
+
+
+.email-text {
+    transition: all 0.2s cubic-bezier(.76, .26, .76, .26);
+    font-family: 'Audiowide', sans-serif;
+    font-size: 1.5rem;
+}
