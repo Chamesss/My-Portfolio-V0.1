@@ -14,12 +14,20 @@ body {
         font-weight: 400;
         font-family: 'Audiowide', sans-serif;
         font-size: 2rem;
+
+        @include respond(tab-port) {
+            font-size: 1.5rem;
+        }
     }
 
     &__options {
         display: flex;
         justify-content: center;
         align-items: center;
+        
+        @include respond(tab-port) {
+            font-size: 0.75rem;
+        }
     }
 
     &__title {
@@ -30,9 +38,17 @@ body {
         text-shadow: 0 0 4px rgba($color-black, 1);
         //animation: simpleFadeIn 0.5s 0.75s forwards;
 
+        @include respond(tab-port) {
+            font-size: 1.75rem;
+        }
+
         &__2 {
             padding-top: 0rem;
             font-size: 2rem;
+
+            @include respond(tab-port) {
+                font-size: 1.5rem;
+            }
         }
     }
 

@@ -10,10 +10,30 @@
     padding: 4rem 10rem;
     z-index: 9999;
     background-color: transparent;
+
+    @include respond(tab-land) {
+        padding: 3rem 7.5rem;
+    }
+    @include respond(tab-port) {
+        padding: 3rem 5rem;
+    }
+    @include respond(phone) {
+        padding: 3rem 2.5rem;
+    }
 }
 
 .header.sticky {
     padding: 2rem 10rem;
     background-color: $color-black;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+    @include respond(tab-land) {
+        padding: 2rem 7.5rem;
+    }
+    @include respond(tab-port) {
+        padding: 2rem 5rem;
+    }
+    @include respond(phone) {
+        padding: 2rem 2.5rem;
+    }
 }

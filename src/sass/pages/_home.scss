@@ -47,11 +47,22 @@
 
     &__box1 {
         display: flex;
-        padding: 10rem 15rem;
-        height: 100vh;
+        padding: 15rem 15rem;
+        //height: 100vh;
         position: relative;
         flex-direction: column;
         width: 100%;
+        margin-top: 5rem;
+
+        @include respond(tab-land) {
+            padding: 12rem 10rem;
+        }
+        @include respond(tab-port) {
+            padding: 8rem 7.5rem;
+        }
+        @include respond(phone) {
+            padding: 8rem 1rem;
+        }
 
         &__svg {
             margin: auto;
@@ -59,12 +70,28 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            width: 100%;
+            margin-bottom: 10rem;
+            height: 80%;
+
+            @include respond(tab-land) {
+                margin-bottom: 9rem;
+            }
+            @include respond(tab-port) {
+                margin-bottom: 7.5rem;
+            }
+            @include respond(phone) {
+                margin-bottom: 5rem;
+            }
+            
         }
 
         &__button {
             display: flex;
             align-self: flex-start;
-
+            @include respond(tab-port) {
+                align-self: center;
+            }
         }
     }
 

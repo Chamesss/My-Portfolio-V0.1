@@ -7,6 +7,19 @@
     display: inline-block;
     position: relative;
     transition: all .3s ease;
+    font-size: inherit;
+
+    @include respond(tab-land) {
+        font-size: 1.5rem;
+    }
+
+    @include respond(tab-port) {
+        font-size:1.25rem ;
+    }
+
+    @include respond(phone) {
+        display: none;
+    }
 
     &:visited {
         color: $color-white;
@@ -50,6 +63,20 @@
         font-family: 'Press Start 2P', sans-serif;
         cursor: pointer;
         transition: all .3s ease-in-out;
+
+        @include respond(tab-land) {
+            padding: 1.5rem;
+        }
+
+        @include respond(tab-port) {
+            padding: 1.5rem 1.25rem;
+        }
+
+        @include respond(phone) {
+            font-size: 0.75rem;
+            padding: 1.25rem 1rem;
+            width: fit-content;
+        }
 
         &:hover {
             transform: translateY(-5px);

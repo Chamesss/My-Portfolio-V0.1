@@ -23,6 +23,18 @@
         cursor: pointer;
         transition: all .3s ease-in-out;
 
+        @include respond(tab-land) {
+            padding: 1.5rem;
+        }
+        @include respond(tab-port) {
+            padding: 1.5rem 1.25rem;
+        }
+        @include respond(phone) {
+            font-size: 0.75rem;
+            padding: 1.25rem 1rem;
+            width: fit-content;
+        }
+
         &:hover {
             transform: translateY(-5px);
             box-shadow: inset 0 0 8px $color-primary, 0 0 8px $color-primary;
@@ -41,6 +53,19 @@
 .animation-rotate {
     position: absolute;
     font-size: 2.2rem;
+
+    @include respond(tab-land) {
+        animation: rotate 3s infinite linear;
+        font-size: 2.2rem;
+    }
+    @include respond(tab-port) {
+        animation: rotate 3s infinite linear;
+        font-size: 2.2rem;
+    }
+    @include respond(phone) {
+        animation: rotate 3s infinite linear;
+        font-size: 1.5rem;
+    }
     
     &__cv {
         text-shadow: 0 0 10px $color-primary, 0 0 2px $color-primary;

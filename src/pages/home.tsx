@@ -81,10 +81,10 @@ function Home() {
                     <div className='section__box1'>
                         <div className='section__box1__svg'>
                             <svg className='svg'>
-                                <text className="outlined-text outlined-text__full">F<tspan className='animation-flash'>U</tspan>LLSTACK</text>
+                                <text x='42.5%' y='50%' dominant-baseline='middle' text-anchor='middle' className="outlined-text outlined-text__full">F<tspan className='animation-flash'>U</tspan>LLSTACK</text>
                             </svg>
                             <svg className='svg'>
-                                <text className="outlined-text outlined-text__dev">DEVEL<tspan className='animation-flash-o'>O</tspan>PER</text>
+                                <text x='57.5%' y='50%' dominant-baseline='middle' text-anchor='middle' className="outlined-text outlined-text__dev">DEVEL<tspan className='animation-flash-o'>O</tspan>PER</text>
                             </svg>
                         </div>
                         <div className='section__box1__button'>
@@ -94,15 +94,6 @@ function Home() {
                                 </span> &nbsp; &nbsp;Download CV
                             </button>
                         </div>
-
-                        {/* <div>
-                            <h1 className='typo-from typo-from__subtitle'>Howdy !</h1>
-                            <span className='typo-from typo-from__subtitle'>My name is <span className='typo-from typo-from__title'>ChamseDin Azouz</span>.</span>
-                            <h2 className='typo-from typo-from__subtitle'>And I'm a Fullstack Developer & Software Engineering student</h2>
-                        </div>
-                        <div>
-                            <img src='../../images/myimage.png' alt='profile' className='myimage myimage__profile' />
-                        </div> */}
                     </div>
                 </section>
 

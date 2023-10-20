@@ -1,6 +1,16 @@
 .svg {
-    width: 900px;
+    width: 100%;
     height: auto;
+
+    @include respond(tab-land) {
+        height: auto;
+    }
+    @include respond(tab-port) {
+        height: auto;
+    }
+    @include respond(phone) {
+        height: 10rem;
+    }
 }
 
 .svg-social {
