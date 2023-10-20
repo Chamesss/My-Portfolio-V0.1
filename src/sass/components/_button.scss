@@ -63,8 +63,7 @@
         font-size: 2.2rem;
     }
     @include respond(phone) {
-        animation: rotate 3s infinite linear;
-        font-size: 1.5rem;
+        display: none;
     }
     
     &__cv {

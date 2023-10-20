@@ -2,8 +2,16 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 3.5rem 0;
+    padding: 3.5rem 2rem;
     background-color: $color-black;
+
+    @include respond(tab-land) {
+    }
+    @include respond(tab-port) {
+    }
+    @include respond(phone) {
+        padding: 2.5rem 1rem;
+    }
 
     &__container {
         position: relative;
@@ -11,6 +19,14 @@
         -moz-perspective: 150rem;
         height: 13rem;
         width: 10rem;
+
+        @include respond(tab-land) {
+        }
+        @include respond(tab-port) {
+        }
+        @include respond(phone) {
+            height: 7rem;
+        }
 
 
         &:hover .social-media__face__front {
@@ -23,7 +39,6 @@
     }
 
     &__face {
-        height: 13rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -52,6 +67,15 @@
 
     &__image {
         width: 8.5rem;
+
+        @include respond(tab-land) {
+        }
+        @include respond(tab-port) {
+        }
+        @include respond(phone) {
+            width: 4rem;
+
+        }
 
     }
 

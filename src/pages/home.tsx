@@ -67,7 +67,7 @@ function Home() {
                         <a href='#about' onClick={(e) => handleScroll('about', e)} className='header-option'>About</a>
                         <a href='#services' onClick={(e) => handleScroll('services', e)} className='header-option'>Services</a>
                         <button className='header-option__hire-button'>
-                            <span className='animation-rotate animation-rotate__header'><AiOutlineMail /></span> &nbsp; &nbsp;Contact Me
+                            <span className='animation-rotate animation-rotate__header'><AiOutlineMail /></span>Contact Me
                         </button>
                     </div>
                 </header>
@@ -91,7 +91,7 @@ function Home() {
                             <button className='button__download-cv'>
                                 <span className='animation-rotate animation-rotate__cv'>
                                     <FiArrowDownCircle />
-                                </span> &nbsp; &nbsp;Download CV
+                                </span>Download CV
                             </button>
                         </div>
                     </div>
@@ -186,6 +186,7 @@ function Home() {
                     <h1 className='typo-from typo-from__level-1-title'>Let's Get Started!</h1>
                     <div className='level-1'>
                         <div className='level-1__container'>
+                            <img src='../../images/level-1.gif' alt='gifyy' className='gifi' />
                             <div className='level-1__image-container'>
                                 <img src='../../images/myimage.png' alt='myimage' className='level-1__myimage' />
                             </div>

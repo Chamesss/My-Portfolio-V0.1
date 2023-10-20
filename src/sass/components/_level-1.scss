@@ -1,65 +1,113 @@
 @import 'typed';
 
+.gifi {
+  width: 100%;
+  height: auto;
+  object-fit: cover !important;
+  border-radius: 0.5rem ;
+}
+
 .level-1 {
-    background-image: url(./../../../public/images/level-1.gif);
-    background-size: cover;
-    width: 80%;
-    height: 60rem;
-    padding: 5rem 5rem;
-    pointer-events: none;
-    box-shadow: 0 0 5px rgba($color-black, 0.75), 0 0 10px rgba($color-black, 0.75);
-  
-    border: 2rem solid;
+  //background-image: url(./../../../public/images/level-1.gif);
+  //background-size: cover;
+  width: 80%;
+  height: 60rem;
+  //padding: 5rem 5rem;
+  pointer-events: none;
+  box-shadow: 0 0 5px rgba($color-black, 0.75), 0 0 10px rgba($color-black, 0.75);
+
+  border: 2rem solid;
+  border-image: linear-gradient(to top, $color-theme-1-dark, $color-theme-2-dark);
+  border-image-slice: 1;
+
+  @include respond(tab-land) {}
+
+  @include respond(tab-port) {}
+
+  @include respond(phone) {
+    width: 95vw;
+    height: 100%;
+    padding: 0;
+    border: 1rem solid;
     border-image: linear-gradient(to top, $color-theme-1-dark, $color-theme-2-dark);
     border-image-slice: 1;
-  
-    &__container {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-  
-    &__image-container {
-      position: absolute;
-      left: 0;
-      bottom: 17%;
-      width: 25%;
-    }
-  
-    &__myimage {
-      width: 100%;
-      height: auto;
-    }
-  
-    &__dialogue-box {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      width: 100%;
-      margin: auto;
-      background-color: rgba($color-black, 0.75);
-      color: $color-white;
-      bottom: 0;
-      border-radius: 0.5rem;
-      min-height: 120px;
-      outline: 2px solid #FACF31;
-      padding: 1rem 3rem;
-    }
-  
-    &__dialogue-text {
-      display: block;
-      appearance: none;
-      font-family: 'Press Start 2P', sans-serif;
-      width: 100%;
-      height: 100%;
-      background-color: transparent;
-      border: none;
-      pointer-events: none;
-      @include typed (("FULL STACK DEVELOPER CURRENTLY BASED IN TUNISIA. ":(),
-          "Hi ! I'm Chamsedin Azouz, I specialize in the MERN stack, crafting, captivating front-end interfaces and ensuring a robust and efficient backend experience for users.":()),
-        [.05, 4, .02],
-        (caret-width: 2px,
-          caret-space: 2px));
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to top, $color-theme-1-dark, $color-theme-2-dark);
+  }
+
+  &__image-container {
+    position: absolute;
+    left: 0;
+    bottom: 17%;
+    width: 25%;
+    @include respond(tab-land) {}
+
+    @include respond(tab-port) {}
+
+    @include respond(phone) {
+      bottom: 11.5%;
     }
   }
+
+  &__myimage {
+    width: 100%;
+    height: auto;
+  }
+
+  &__dialogue-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 98%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: rgba($color-black, 0.75);
+    color: $color-white;
+    bottom: 2%;
+    border-radius: 0.5rem;
+    min-height: 120px;
+    outline: 2px solid #FACF31;
+    padding: 1rem 3rem;
+
+    @include respond(tab-land) {}
+
+    @include respond(tab-port) {}
+
+    @include respond(phone) {
+      padding: 0.25rem 1rem;
+      min-height: 40px;
+    }
+  }
+
+  &__dialogue-text {
+    display: block;
+    appearance: none;
+    font-family: 'Press Start 2P', sans-serif;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    pointer-events: none;
+    @include typed (("FULL STACK DEVELOPER CURRENTLY BASED IN TUNISIA. ":(),
+        "Hi ! I'm Chamsedin Azouz, I specialize in the MERN stack, crafting, captivating front-end interfaces and ensuring a robust and efficient backend experience for users.":()),
+      [.05, 4, .02],
+      (caret-width: 2px,
+        caret-space: 2px));
+
+    @include respond(tab-land) {}
+
+    @include respond(tab-port) {}
+
+    @include respond(phone) {
+      font-size: 0.5rem;
+    }
+  }
+}

@@ -15,6 +15,14 @@
         top: 0;
         right: 0;
     }
+
+    @include respond(tab-land) {
+    }
+    @include respond(tab-port) {
+    }
+    @include respond(phone) {
+        display: none;
+    }
 }
 
 .fixed {
@@ -23,6 +31,13 @@
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     box-shadow: 0 0 2px $color-black;
+    @include respond(tab-land) {
+    }
+    @include respond(tab-port) {
+    }
+    @include respond(phone) {
+        display: none;
+    }
 
     &__x {
         border-top-right-radius: 1rem;
