@@ -10,11 +10,30 @@
     &__tools {
         margin-top: 10rem;
         width: 80%;
+
+        @include respond(tab-land) {}
+
+        @include respond(tab-port) {}
+
+        @include respond(phone) {
+            margin-top: 5rem;
+            width: 95%;
+        }
     }
 
     &__captures {
         margin-top: 10rem;
         width: 80%;
+
+        @include respond(tab-land) {}
+
+        @include respond(tab-port) {}
+
+        @include respond(phone) {
+            margin-top: 5rem;
+            width: 95%;
+        }
+
     }
 
     &__flexing {
@@ -26,6 +45,16 @@
         padding: 5rem 5rem;
         border-radius: 2rem;
         background-color: rgba($color-black, 0.2);
+
+        @include respond(tab-land) {}
+
+        @include respond(tab-port) {}
+
+        @include respond(phone) {
+            flex-direction: column-reverse;
+            padding: 2.5rem 2rem;
+            gap: 1rem;
+        }
     }
 
 
@@ -43,6 +72,14 @@
         padding: 5rem 10rem;
         position: relative;
         overflow: auto;
+
+        @include respond(tab-land) {}
+
+        @include respond(tab-port) {}
+
+        @include respond(phone) {
+            padding: 4rem 2rem;
+        }
     }
 
     &__box1 {
@@ -57,9 +94,11 @@
         @include respond(tab-land) {
             padding: 12rem 10rem;
         }
+
         @include respond(tab-port) {
             padding: 8rem 7.5rem;
         }
+
         @include respond(phone) {
             padding: 8rem 1rem;
         }
@@ -77,18 +116,21 @@
             @include respond(tab-land) {
                 margin-bottom: 9rem;
             }
+
             @include respond(tab-port) {
                 margin-bottom: 7.5rem;
             }
+
             @include respond(phone) {
                 margin-bottom: 5rem;
             }
-            
+
         }
 
         &__button {
             display: flex;
             align-self: flex-start;
+
             @include respond(tab-port) {
                 align-self: center;
             }
@@ -103,6 +145,19 @@
         width: 80%;
         gap: 10rem;
         margin-top: 7.5rem;
+
+        @include respond(tab-land) {
+        }
+
+        @include respond(tab-port) {
+        }
+
+        @include respond(phone) {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        
     }
 }
 

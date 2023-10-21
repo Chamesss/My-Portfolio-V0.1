@@ -10,6 +10,16 @@ body {
     color: $color-white;
     font-size: 1.5rem;
 
+    @include respond(tab-land) {
+    }
+
+    @include respond(tab-port) {
+    }
+
+    @include respond(phone) {
+        font-size: 1.15rem;
+    }
+
     &__header {
         font-weight: 400;
         font-family: 'Audiowide', sans-serif;
@@ -70,6 +80,16 @@ body {
         font-weight: 600;
         font-size: 1.5rem;
         text-align: center;
+
+        @include respond(tab-land) {
+        }
+
+        @include respond(tab-port) {
+        }
+
+        @include respond(phone) {
+            font-size: 1rem;
+        }
 
         &__name {
             color: rgba($color-white, 1);

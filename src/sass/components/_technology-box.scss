@@ -1,28 +1,39 @@
 .grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1.5rem;
-    margin-top: 4rem;
-    box-shadow: 0 0 5px rgba($color-black, 0.5);
-    padding: 5rem 5rem;
-    border-radius: 2rem;
-    background-color: rgba($color-black, 0.2);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  margin-top: 4rem;
+  box-shadow: 0 0 5px rgba($color-black, 0.5);
+  padding: 5rem 5rem;
+  border-radius: 2rem;
+  background-color: rgba($color-black, 0.2);
+
+  @include respond(tab-land) {
   }
-  
-  .technology-box {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+
+  @include respond(tab-port) {
+  }
+
+  @include respond(phone) {
+    grid-template-columns: repeat(2, 1fr);
     padding: 1rem;
-    border-radius: 8px;
-    text-align: center;
-    color: white;
-    transition: all .3s ease;
   }
-  
-  .technology-text {
-    margin: 0;
-    font-size: 1.2rem;
-    pointer-events: none;
-  }
+}
+
+.technology-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  transition: all .3s ease;
+}
+
+.technology-text {
+  margin: 0;
+  font-size: 1.2rem;
+  pointer-events: none;
+}

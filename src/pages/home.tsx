@@ -238,7 +238,7 @@ function Home() {
                         <div className='centered'>
                             <h1 className='typo-from typo-from__title typo-from__title__2'>Feel Free To Reach Out!</h1>
                             <button className='header-option__hire-button'>
-                                <span className='animation-rotate animation-rotate__header'><AiOutlineMail /></span> &nbsp; &nbsp;Contact Me
+                                <span className='animation-rotate animation-rotate__header'><AiOutlineMail /></span>Contact Me
                             </button>
                         </div>
                         <footer>

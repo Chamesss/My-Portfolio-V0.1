@@ -23,6 +23,18 @@
 .space-between {
     display: flex;
     justify-content: space-between;
+
+    @include respond(tab-land) {
+    }
+
+    @include respond(tab-port) {
+    }
+
+    @include respond(phone) {
+        justify-content: center;
+        flex-direction: column;
+        gap: 2rem;
+    }
 }
 
 .relative {
