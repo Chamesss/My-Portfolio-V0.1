@@ -67,7 +67,7 @@ function Home() {
                         <a href='#about' onClick={(e) => handleScroll('about', e)} className='header-option'>About</a>
                         <a href='#services' onClick={(e) => handleScroll('services', e)} className='header-option'>Services</a>
                         <button className='header-option__hire-button'>
-                            <span className='animation-rotate animation-rotate__header'><AiOutlineMail /></span>Contact Me
+                            <span className='void'></span><span className='animation-rotate animation-rotate__header'><AiOutlineMail /></span>Contact Me
                         </button>
                     </div>
                 </header>
@@ -81,14 +81,15 @@ function Home() {
                     <div className='section__box1'>
                         <div className='section__box1__svg'>
                             <svg className='svg'>
-                                <text x='42.5%' y='50%' dominant-baseline='middle' text-anchor='middle' className="outlined-text outlined-text__full">F<tspan className='animation-flash'>U</tspan>LLSTACK</text>
+                                <text x='42.5%' y='50%' dominantBaseline='middle' textAnchor='middle' className="outlined-text outlined-text__full">F<tspan className='animation-flash'>U</tspan>LLSTACK</text>
                             </svg>
                             <svg className='svg'>
-                                <text x='57.5%' y='50%' dominant-baseline='middle' text-anchor='middle' className="outlined-text outlined-text__dev">DEVEL<tspan className='animation-flash-o'>O</tspan>PER</text>
+                                <text x='57.5%' y='50%' dominantBaseline='middle' textAnchor='middle' className="outlined-text outlined-text__dev">DEVEL<tspan className='animation-flash-o'>O</tspan>PER</text>
                             </svg>
                         </div>
                         <div className='section__box1__button'>
                             <button className='button__download-cv'>
+                                <span className='void'></span>
                                 <span className='animation-rotate animation-rotate__cv'>
                                     <FiArrowDownCircle />
                                 </span>Download CV
@@ -198,7 +199,10 @@ function Home() {
                     </div>
 
                     <section id='services' className='section__tools'>
-                        <h1 className='typo-from typo-from__title'>TOOLS THAT I USE :</h1>
+                        <div className='relative'>
+                            <h1 className='typo-from typo-from__title'>TOOLS THAT I USE :</h1>
+                            <span className='title-line'></span>
+                        </div>
                         <div className='grid'>
                             {technologies.map((tech, index) => (
                                 <div
@@ -214,8 +218,11 @@ function Home() {
                         </div>
                     </section>
 
-                    <section  className="section__captures">
-                        <h1 className='typo-from typo-from__title'>WHAT DO I WORK :</h1>
+                    <section className="section__captures">
+                        <div className='relative'>
+                            <h1 className='typo-from typo-from__title'>WHAT DO I WORK :</h1>
+                            <span className='title-line'></span>
+                        </div>
                         <div className='section__flexing'>
                             <div className='flex'>
                                 <p className="typo-from">
@@ -238,7 +245,7 @@ function Home() {
                         <div className='centered'>
                             <h1 className='typo-from typo-from__title typo-from__title__2'>Feel Free To Reach Out!</h1>
                             <button className='header-option__hire-button'>
-                                <span className='animation-rotate animation-rotate__header'><AiOutlineMail /></span>Contact Me
+                                <span className='void'></span><span className='animation-rotate animation-rotate__header'><AiOutlineMail /></span>Contact Me
                             </button>
                         </div>
                         <footer>

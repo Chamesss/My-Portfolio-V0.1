@@ -14,11 +14,15 @@
     }
 
     &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: relative;
         perspective: 150rem;
         -moz-perspective: 150rem;
         height: 13rem;
         width: 10rem;
+
 
         @include respond(tab-land) {
         }
@@ -46,7 +50,8 @@
         transition: all .8s ease;
         position: absolute;
         top: 0;
-        left: 0;
+        bottom: 0;
+        margin: auto;
         width: 100%;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;

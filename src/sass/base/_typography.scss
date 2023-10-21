@@ -46,6 +46,7 @@ body {
         font-weight: 700;
         opacity: 1;
         text-shadow: 0 0 4px rgba($color-black, 1);
+        padding: 0rem 1rem;
         //animation: simpleFadeIn 0.5s 0.75s forwards;
 
         @include respond(tab-port) {

@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     gap: 5rem;
+
     &__non-gap {
         gap: 0;
         justify-content: flex-start !important;
@@ -11,12 +12,14 @@
 }
 
 .spaced {
-    gap:10rem;
+    gap: 10rem;
+
     &__more {
-        gap:20rem;
+        gap: 20rem;
     }
+
     &__less {
-        gap:3rem;
+        gap: 3rem;
     }
 }
 
@@ -24,11 +27,9 @@
     display: flex;
     justify-content: space-between;
 
-    @include respond(tab-land) {
-    }
+    @include respond(tab-land) {}
 
-    @include respond(tab-port) {
-    }
+    @include respond(tab-port) {}
 
     @include respond(phone) {
         justify-content: center;
@@ -45,15 +46,19 @@
     &__blue {
         color: #463191
     }
+
     &__pink {
         color: #E72696
     }
+
     &__yellow {
         color: #FACF31
     }
+
     &__orange {
         color: #F99B1D
     }
+
     &__greencyan {
         color: #5EDBA5
     }
@@ -79,4 +84,34 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.title-line {
+    position: absolute;
+    width: 40%;
+    border: 0.15rem solid rgba(255, 255, 255, 0.7);
+    border-radius: 4rem;
+    right: 0;
+    top: 50%;
+    margin-right: 1rem;
+
+    @include respond(tab-land) {}
+
+        @include respond(tab-port) {}
+
+        @include respond(phone) {
+            width: 20%;
+        }
+}
+
+.void {
+    width: 3.5rem;
+
+    @include respond(tab-land) {}
+
+    @include respond(tab-port) {}
+
+    @include respond(phone) {
+        width: 0rem;
+    }
 }
