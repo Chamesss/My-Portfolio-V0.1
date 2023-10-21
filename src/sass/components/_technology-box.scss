@@ -30,6 +30,16 @@
   text-align: center;
   color: white;
   transition: all .3s ease;
+
+  @include respond(tab-land) {
+  }
+
+  @include respond(tab-port) {
+  }
+
+  @include respond(phone) {
+      padding: 0.75rem;
+  }
 }
 
 .technology-text {
