@@ -187,7 +187,9 @@ function Home() {
                     <h1 className='typo-from typo-from__level-1-title'>Let's Get Started!</h1>
                     <div className='level-1'>
                         <div className='level-1__container'>
-                            <img src='../../images/level-1.gif' alt='gifyy' className='gifi' />
+                            <video autoPlay loop className="gifi">
+                                <source src="../../images/level-1.webm" type="video/webm" />
+                            </video>
                             <div className='level-1__image-container'>
                                 <img src='../../images/myimage.png' alt='myimage' className='level-1__myimage' />
                             </div>
