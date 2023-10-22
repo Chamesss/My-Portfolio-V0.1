@@ -64,6 +64,15 @@
     }
 }
 
+.color {
+    &__primary {
+        color: $color-primary;
+    }
+    &__secondary {
+        color: $color-secondary;
+    }
+}
+
 .flex {
     display: flex;
     flex: 1;

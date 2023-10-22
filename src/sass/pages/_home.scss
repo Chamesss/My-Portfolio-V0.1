@@ -62,7 +62,7 @@
         background-image: linear-gradient(100deg,
                 rgba($color-theme-1, 0.5) 40%,
                 rgba($color-theme-2, 0.5) 60%);
-                height: 100vh;
+        height: 100vh;
     }
 
     &__2 {
@@ -147,18 +147,16 @@
         gap: 10rem;
         margin-top: 7.5rem;
 
-        @include respond(tab-land) {
-        }
+        @include respond(tab-land) {}
 
-        @include respond(tab-port) {
-        }
+        @include respond(tab-port) {}
 
         @include respond(phone) {
             width: 100%;
             justify-content: center;
             align-items: center;
         }
-        
+
     }
 }
 
@@ -179,4 +177,46 @@
     height: 100%;
     object-fit: cover;
     transform: translateZ(0);
+}
+
+.experience-slider {
+    display: flex;
+    width: 80%;
+    height: 100%;
+
+    .experience-slide {
+        color: white;
+        //text-align: center;
+        margin: 0 auto;
+        padding: 1rem
+    }
+}
+
+.exp {
+    background-color: rgba($color-black, 0.2);
+    border-radius: 2rem;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+
+.custom-dots ul li button {
+    background-color: white;
+    color: aliceblue;
+    border: 2px solid #333;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.slick-dots li button:before {
+    color: white !important
+}
+
+;
+
+.slick-dots li.slick-active button:before {
+    color: white !important;
 }

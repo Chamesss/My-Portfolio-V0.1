@@ -2,11 +2,24 @@ import React, { useEffect, useState } from 'react';
 import { FiArrowDownCircle } from '@react-icons/all-files/fi/FiArrowDownCircle';
 import { AiOutlineMail } from '@react-icons/all-files/ai/AiOutlineMail';
 import { technologies } from '../components/technologies';
+import { experiences } from '../components/expericenes';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 function Home() {
 
     const [isHeaderFixed, setIsHeaderFixed] = useState(false);
     const [scrollPosition, setScrollPosition] = useState(0);
+
+
+    const sliderSettings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -242,6 +255,30 @@ function Home() {
                             </div>
                         </div>
                     </section>
+
+                    <section className='section__tools'>
+                        <div className='relative'>
+                            <h1 className='typo-from typo-from__title'>EXPERIENCE :</h1>
+                            <span className='title-line'></span>
+                        </div>
+                        <div className="exp">
+                            <Slider {...sliderSettings} className="experience-slider">
+                                {experiences.map((experience, index) => (
+                                    <div key={index} className="experience-slide">
+                                        <h2>{experience.exp_name}</h2>
+                                        <p className='typo-from color__secondary'>{experience.place}</p>
+                                        <p>{experience.date}</p>
+                                        <span>
+                                            {experience.missions.map((mission, missionIndex) => (
+                                                <p key={missionIndex}>{mission}</p>
+                                            ))}
+                                        </span>
+                                    </div>
+                                ))}
+                            </Slider>
+                        </div>
+                    </section>
+
 
                     <div className='section__box2'>
                         <div className='centered'>
