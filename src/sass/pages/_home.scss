@@ -184,6 +184,16 @@
     width: 80%;
     height: 100%;
 
+    @include respond(tab-land) {
+    }
+
+    @include respond(tab-port) {
+    }
+
+    @include respond(phone) {
+        width: 90%;
+    }
+
     .experience-slide {
         color: white;
         //text-align: center;
@@ -199,7 +209,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5rem;
+    padding: 2rem 2rem 5rem 2rem;
 }
 
 .custom-dots ul li button {

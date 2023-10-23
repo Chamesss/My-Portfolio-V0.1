@@ -86,6 +86,16 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    &__1 {
+        display: flex;
+        align-items: flex-start;
+    }
+    &__2 {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
 }
 
 .column {
@@ -123,4 +133,30 @@
     @include respond(phone) {
         width: 0rem;
     }
+}
+
+.margintop {
+    margin-top: 0.2rem;
+    &__2 {
+        margin-top: 0.4rem;
+    }
+}
+
+.marginleft {
+    margin-left: 1rem;
+}
+
+.letterspacing {
+    letter-spacing: 0.1rem;
+}
+
+.new_opportunities {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: auto;
+    margin-top: 12rem;
 }

@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { FiArrowDownCircle } from '@react-icons/all-files/fi/FiArrowDownCircle';
+import { FiAtSign } from '@react-icons/all-files/fi/FiAtSign';
 import { AiOutlineMail } from '@react-icons/all-files/ai/AiOutlineMail';
+import { FaRegDotCircle } from '@react-icons/all-files/fa/FaRegDotCircle'
+import { IoConstruct } from '@react-icons/all-files/io5/IoConstruct'
 import { technologies } from '../components/technologies';
 import { experiences } from '../components/expericenes';
 import Slider from 'react-slick';
@@ -215,7 +218,7 @@ function Home() {
 
                     <section id='services' className='section__tools'>
                         <div className='relative'>
-                            <h1 className='typo-from typo-from__title'>TOOLS THAT I USE :</h1>
+                            <h1 className='typo-from typo-from__title letterspacing'>TOOLS THAT I USE :</h1>
                             <span className='title-line'></span>
                         </div>
                         <div className='grid'>
@@ -235,7 +238,7 @@ function Home() {
 
                     <section className="section__captures">
                         <div className='relative'>
-                            <h1 className='typo-from typo-from__title'>WHAT DO I WORK :</h1>
+                            <h1 className='typo-from typo-from__title letterspacing'>WHAT DO I WORK :</h1>
                             <span className='title-line'></span>
                         </div>
                         <div className='section__flexing'>
@@ -258,23 +261,35 @@ function Home() {
 
                     <section className='section__tools'>
                         <div className='relative'>
-                            <h1 className='typo-from typo-from__title'>EXPERIENCE :</h1>
+                            <h1 className='typo-from typo-from__title letterspacing'>EXPERIENCES :</h1>
                             <span className='title-line'></span>
                         </div>
                         <div className="exp">
                             <Slider {...sliderSettings} className="experience-slider">
                                 {experiences.map((experience, index) => (
                                     <div key={index} className="experience-slide">
-                                        <h2>{experience.exp_name}</h2>
-                                        <p className='typo-from color__secondary'>{experience.place}</p>
-                                        <p>{experience.date}</p>
+                                        <div className='center row__2'>
+                                            <div className='typo-from typo-from__title typo-from__title__3 color__primary margintop__2'><IoConstruct /></div>
+                                            <p className='typo-from typo-from__title typo-from__title__3 letterspacing'>{experience.exp_name}</p>
+                                        </div>
+                                        <div className='center row__1 marginleft'>
+                                            <div className='typo-from color__secondary margintop'><FiAtSign /></div>
+                                            <p className='typo-from color__secondary'>{experience.place}</p>
+                                        </div>
+                                        <p className='typo-from typo-from__date marginleft'>{experience.date}</p>
                                         <span>
                                             {experience.missions.map((mission, missionIndex) => (
-                                                <p key={missionIndex}>{mission}</p>
+                                                <div className='center row__2'>
+                                                    <div className='typo-from color__secondary margintop'><FaRegDotCircle /></div>
+                                                    <p className='typo-from' key={missionIndex}>{mission}</p>
+                                                </div>
                                             ))}
                                         </span>
                                     </div>
                                 ))}
+                                <div className='new_opportunities'>
+                                    <h1 className='typo-from typo-from__title typo-from__title__3 letterspacing'>Welcoming new oppotunities !</h1>
+                                </div>
                             </Slider>
                         </div>
                     </section>
