@@ -1,19 +1,20 @@
 .grid {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1.5rem 1fr 1.5rem 1fr 1.5rem 1fr 1.5rem 1fr;
   grid-template-columns: repeat(5, 1fr);
   gap: 1.5rem;
   margin-top: 4rem;
-  box-shadow: 0 0 5px rgba($color-black, 0.5);
+  -webkit-box-shadow: 0 0 5px rgba($color-black, 0.5);
+          box-shadow: 0 0 5px rgba($color-black, 0.5);
   padding: 5rem 5rem;
   border-radius: 2rem;
   background-color: rgba($color-black, 0.2);
 
   @include respond(tab-land) {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2rem;
   }
-
-  @include respond(tab-port) {
-  }
-
   @include respond(phone) {
     grid-template-columns: repeat(2, 1fr);
     padding: 1rem;
@@ -21,21 +22,26 @@
 }
 
 .technology-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
   color: white;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
   transition: all .3s ease;
-
-  @include respond(tab-land) {
-  }
-
-  @include respond(tab-port) {
-  }
 
   @include respond(phone) {
       padding: 0.75rem;

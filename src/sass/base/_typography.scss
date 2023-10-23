@@ -1,5 +1,4 @@
 body {
-    //font-family: 'Press Start 2P', sans-serif;
     font-family: 'Audiowide', sans-serif;
     font-weight: 400;
     line-height: 1.7;
@@ -9,13 +8,6 @@ body {
 .typo-from {
     color: $color-white;
     font-size: 1.5rem;
-
-    @include respond(tab-land) {
-    }
-
-    @include respond(tab-port) {
-    }
-
     @include respond(phone) {
         font-size: 1.15rem;
     }
@@ -24,7 +16,6 @@ body {
         font-weight: 400;
         font-family: 'Audiowide', sans-serif;
         font-size: 2rem;
-
         @include respond(tab-port) {
             font-size: 1.5rem;
         }
@@ -34,7 +25,6 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-
         @include respond(tab-port) {
             font-size: 0.75rem;
         }
@@ -47,8 +37,6 @@ body {
         opacity: 1;
         text-shadow: 0 0 4px rgba($color-black, 1);
         padding: 0rem 1rem;
-        //animation: simpleFadeIn 0.5s 0.75s forwards;
-
         @include respond(tab-port) {
             font-size: 1.75rem;
         }
@@ -56,31 +44,17 @@ body {
         &__2 {
             padding-top: 0rem;
             font-size: 2rem;
-
             @include respond(tab-port) {
                 font-size: 1.5rem;
             }
         }
+
         &__3 {
-            padding: 0 0;
-            @include respond(tab-land) {
-            }
-        
-            @include respond(tab-port) {
-            }
-        
+            padding: 0 0; 
             @include respond(phone) {
                 font-size: 1.5rem;
             }
         }
-    }
-
-    &__subtitle {
-        color: rgba($color-white, 0.5);
-        font-weight: 600;
-        opacity: 0;
-
-        animation: rightInvade 0.5s 1.25s forwards;
     }
 
     &__social {
@@ -90,13 +64,7 @@ body {
 
     &__date {
         opacity: 0.7;
-        font-size: 1.5rem;
-        @include respond(tab-land) {
-        }
-    
-        @include respond(tab-port) {
-        }
-    
+        font-size: 1.5rem;  
         @include respond(phone) {
             font-size: 1rem;
         }
@@ -107,13 +75,6 @@ body {
         font-weight: 600;
         font-size: 1.5rem;
         text-align: center;
-
-        @include respond(tab-land) {
-        }
-
-        @include respond(tab-port) {
-        }
-
         @include respond(phone) {
             font-size: 1rem;
         }
@@ -132,11 +93,6 @@ body {
         animation: flashing .5s infinite alternate;
         background-color: $color-theme-2-dark;
         font-family: 'Press Start 2P', sans-serif;
-
-        @include respond(tab-land) {}
-
-        @include respond(tab-port) {}
-
         @include respond(phone) {
             text-align: center;
             padding: 0.25rem 1rem;

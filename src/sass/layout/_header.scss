@@ -3,9 +3,17 @@
     top: 0;
     left: 0;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: .6s;
+    -o-transition: .6s;
     transition: .6s;
     padding: 4rem 10rem;
     z-index: 9999;
@@ -25,7 +33,8 @@
 .header.sticky {
     padding: 2rem 10rem;
     background-color: $color-black;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 
     @include respond(tab-land) {
         padding: 2rem 7.5rem;

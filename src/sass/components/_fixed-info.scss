@@ -1,7 +1,13 @@
 .line {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: absolute;
     height: 100%;
     background-color: transparent;
@@ -15,12 +21,7 @@
         top: 0;
         right: 0;
     }
-
-    @include respond(tab-land) {
-    }
     @include respond(tab-port) {
-    }
-    @include respond(phone) {
         display: none;
     }
 }
@@ -30,11 +31,8 @@
     padding: 2.5rem 1.2rem;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    box-shadow: 0 0 2px $color-black;
-    @include respond(tab-land) {
-    }
-    @include respond(tab-port) {
-    }
+    -webkit-box-shadow: 0 0 2px $color-black;
+            box-shadow: 0 0 2px $color-black;
     @include respond(phone) {
         display: none;
     }
@@ -45,10 +43,19 @@
     }
 
     &__y {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         padding: 1.2rem 2.5rem;
         border-bottom-right-radius: 1rem;
         border-bottom-left-radius: 1rem;
@@ -60,14 +67,18 @@
         &:hover .email-text {
             color: $color-secondary;
             fill: $color-secondary;
-            filter: drop-shadow(0 0 4px $color-secondary);
-            transform: translateX(-3px);
+            -webkit-filter: drop-shadow(0 0 4px $color-secondary);
+                    filter: drop-shadow(0 0 4px $color-secondary);
+            -webkit-transform: translateX(-3px);
+                -ms-transform: translateX(-3px);
+                    transform: translateX(-3px);
         }
     }
 }
 
-
 .email-text {
+    -webkit-transition: all 0.2s cubic-bezier(.76, .26, .76, .26);
+    -o-transition: all 0.2s cubic-bezier(.76, .26, .76, .26);
     transition: all 0.2s cubic-bezier(.76, .26, .76, .26);
     font-family: 'Audiowide', sans-serif;
     font-size: 1.5rem;

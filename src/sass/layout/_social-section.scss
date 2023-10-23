@@ -1,52 +1,69 @@
 .social-media {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     padding: 3.5rem 2rem;
     background-color: $color-black;
 
-    @include respond(tab-land) {
-    }
-    @include respond(tab-port) {
-    }
     @include respond(phone) {
         padding: 2.5rem 1rem;
     }
 
     &__container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         position: relative;
+        -webkit-perspective: 150rem;
         perspective: 150rem;
         -moz-perspective: 150rem;
         height: 13rem;
         width: 10rem;
 
-
-        @include respond(tab-land) {
-        }
-        @include respond(tab-port) {
-        }
         @include respond(phone) {
             height: 7rem;
         }
 
+        @media (min-width:1200px) {
+            &:hover .social-media__face__front {
+                -webkit-transform: rotateY(-180deg);
+                transform: rotateY(-180deg);
+            }
 
-        &:hover .social-media__face__front {
-            transform: rotateY(-180deg);
-        }
-    
-        &:hover .social-media__face__back {
-            transform: rotateY(0);
+            &:hover .social-media__face__back {
+                -webkit-transform: rotateY(0);
+                transform: rotateY(0);
+            }
         }
     }
 
     &__face {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-transition: all .8s ease;
+        -o-transition: all .8s ease;
         transition: all .8s ease;
         position: absolute;
         top: 0;
@@ -57,6 +74,7 @@
         backface-visibility: hidden;
         border-radius: 3px;
         overflow: hidden;
+        -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 
         &__front {
@@ -64,22 +82,17 @@
         }
 
         &__back {
+            -webkit-transform: rotateY(180deg);
             transform: rotateY(180deg);
             cursor: pointer;
         }
     }
 
-
     &__image {
         width: 8.5rem;
 
-        @include respond(tab-land) {
-        }
-        @include respond(tab-port) {
-        }
         @include respond(phone) {
             width: 4rem;
-
         }
 
     }
@@ -90,10 +103,15 @@
 
     &__footer {
         width: 3rem;
+        -webkit-box-shadow: 0 3rem 6rem rgba($color-black, .4);
         box-shadow: 0 3rem 6rem rgba($color-black, .4);
+        -webkit-transition: all .3s ease;
+        -o-transition: all .3s ease;
         transition: all .3s ease;
 
         &:hover {
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
             transform: scale(1.1);
         }
     }

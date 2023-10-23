@@ -10,12 +10,21 @@
     }
 
     @include respond(tab-port) {
-        font-size: 4rem;
+        font-size: 5rem;
     }
 
     @include respond(phone) {
+        font-size: 4rem;
+    }
+
+    @media (max-width:410px) {
+        font-size: 3.5rem;
+    }
+
+    @media (max-width:360px) {
         font-size: 2.75rem;
     }
+
 
     &__full {
         stroke: $color-secondary;
@@ -29,9 +38,11 @@
 }
 
 .animation-flash {
-    animation: lightningFlash 3s alternate infinite;
+    -webkit-animation: lightningFlash 3s alternate infinite;
+            animation: lightningFlash 3s alternate infinite;
 }
 
 .animation-flash-o {
-    animation: lightningFlash-o 3s linear infinite;
+    -webkit-animation: lightningFlash-o 3s linear infinite;
+            animation: lightningFlash-o 3s linear infinite;
 }

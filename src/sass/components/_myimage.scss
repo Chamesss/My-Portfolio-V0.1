@@ -1,7 +1,8 @@
 .myimage {
     display: inline-block;
     width: 32%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     &__profile {
         margin: auto;
         border-radius: 7.5rem;

@@ -3,41 +3,60 @@
 .gifi {
   width: 100%;
   height: auto;
-  object-fit: cover !important;
-  border-radius: 0.5rem ;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  border-radius: 0.5rem;
 }
 
 .level-1 {
-  //background-image: url(./../../../public/images/level-1.gif);
-  //background-size: cover;
-  width: 80%;
+  width: 75vw;
   height: 60rem;
-  //padding: 5rem 5rem;
   pointer-events: none;
-  box-shadow: 0 0 5px rgba($color-black, 0.75), 0 0 10px rgba($color-black, 0.75);
-
+  -webkit-box-shadow: 0 0 5px rgba($color-black, 0.75), 0 0 10px rgba($color-black, 0.75);
+          box-shadow: 0 0 5px rgba($color-black, 0.75), 0 0 10px rgba($color-black, 0.75);
   border: 2rem solid;
-  border-image: linear-gradient(to top, $color-theme-1-dark, $color-theme-2-dark);
+  -o-border-image: -o-linear-gradient(bottom, $color-theme-1-dark, $color-theme-2-dark);
+     border-image: -webkit-gradient(linear, left bottom, left top, from($color-theme-1-dark), to($color-theme-2-dark));
+     border-image: linear-gradient(to top, $color-theme-1-dark, $color-theme-2-dark);
   border-image-slice: 1;
 
-  @include respond(tab-land) {}
-
-  @include respond(tab-port) {}
-
-  @include respond(phone) {
-    width: 95vw;
+  @include respond(tab-land) {
+    width: 80vw;
     height: 100%;
     padding: 0;
     border: 1rem solid;
-    border-image: linear-gradient(to top, $color-theme-1-dark, $color-theme-2-dark);
+    -o-border-image: -o-linear-gradient(bottom, $color-theme-1-dark, $color-theme-2-dark);
+       border-image: -webkit-gradient(linear, left bottom, left top, from($color-theme-1-dark), to($color-theme-2-dark));
+       border-image: linear-gradient(to top, $color-theme-1-dark, $color-theme-2-dark);
+    border-image-slice: 1;
+  }
+
+  @include respond(tab-port) {
+    width: 95vw;
+    border: 1rem solid;
+    -o-border-image: -o-linear-gradient(bottom, $color-theme-1-dark, $color-theme-2-dark);
+       border-image: -webkit-gradient(linear, left bottom, left top, from($color-theme-1-dark), to($color-theme-2-dark));
+       border-image: linear-gradient(to top, $color-theme-1-dark, $color-theme-2-dark);
+    border-image-slice: 1;
+  }
+
+  @include respond(phone) {
+    border: 1rem solid;
+    -o-border-image: -o-linear-gradient(bottom, $color-theme-1-dark, $color-theme-2-dark);
+       border-image: -webkit-gradient(linear, left bottom, left top, from($color-theme-1-dark), to($color-theme-2-dark));
+       border-image: linear-gradient(to top, $color-theme-1-dark, $color-theme-2-dark);
     border-image-slice: 1;
   }
 
   &__container {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 100%;
     width: 100%;
+    background-image: -webkit-gradient(linear, left bottom, left top, from($color-theme-1-dark), to($color-theme-2-dark));
+    background-image: -o-linear-gradient(bottom, $color-theme-1-dark, $color-theme-2-dark);
     background-image: linear-gradient(to top, $color-theme-1-dark, $color-theme-2-dark);
   }
 
@@ -46,9 +65,6 @@
     left: 0;
     bottom: 17%;
     width: 25%;
-    @include respond(tab-land) {}
-
-    @include respond(tab-port) {}
 
     @include respond(phone) {
       bottom: 11.5%;
@@ -61,9 +77,15 @@
   }
 
   &__dialogue-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: absolute;
     width: 98%;
     left: 0;
@@ -77,10 +99,6 @@
     outline: 2px solid #FACF31;
     padding: 1rem 3rem;
 
-    @include respond(tab-land) {}
-
-    @include respond(tab-port) {}
-
     @include respond(phone) {
       padding: 0.25rem 1rem;
       min-height: 40px;
@@ -89,7 +107,9 @@
 
   &__dialogue-text {
     display: block;
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     font-family: 'Press Start 2P', sans-serif;
     width: 100%;
     height: 100%;
@@ -101,10 +121,6 @@
       [.05, 4, .02],
       (caret-width: 2px,
         caret-space: 2px));
-
-    @include respond(tab-land) {}
-
-    @include respond(tab-port) {}
 
     @include respond(phone) {
       font-size: 0.5rem;

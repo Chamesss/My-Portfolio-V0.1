@@ -8,8 +8,12 @@
     cursor: pointer;
 
     &__download-cv {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         position: relative;
         padding: 2rem;
         outline: none;
@@ -17,10 +21,13 @@
         border-radius: 5rem;
         background-color: transparent;
         color: $color-primary;
-        box-shadow: inset 0 0 4px $color-primary, 0 0 8px $color-primary;
+        -webkit-box-shadow: inset 0 0 4px $color-primary, 0 0 8px $color-primary;
+                box-shadow: inset 0 0 4px $color-primary, 0 0 8px $color-primary;
         text-shadow: 0 0 8px $color-primary;
         font-family: 'Press Start 2P', sans-serif;
         cursor: pointer;
+        -webkit-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
         transition: all .3s ease-in-out;
 
         @include respond(tab-land) {
@@ -30,19 +37,24 @@
             padding: 1.5rem 1.25rem;
         }
         @include respond(phone) {
-            font-size: 0.75rem;
+            font-size: 1rem;
             padding: 1.25rem 1rem;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
             width: fit-content;
         }
 
         &:hover {
-            transform: translateY(-5px);
-            box-shadow: inset 0 0 8px $color-primary, 0 0 8px $color-primary;
+            -webkit-transform: translateY(-5px);
+                -ms-transform: translateY(-5px);
+                    transform: translateY(-5px);
+            -webkit-box-shadow: inset 0 0 8px $color-primary, 0 0 8px $color-primary;
+                    box-shadow: inset 0 0 8px $color-primary, 0 0 8px $color-primary;
             text-shadow: 0 0 8px $color-primary, 0 0 16px $color-primary;
 
             &:hover .animation-rotate {
-                //color: red;
-                animation: rotate 3s infinite linear;
+                -webkit-animation: rotate 3s infinite linear;
+                        animation: rotate 3s infinite linear;
                 text-shadow: 0 0 2px $color-primary, 0 0 4px $color-primary;
             }
         }
@@ -55,25 +67,19 @@
     font-size: 2.2rem;
 
     @include respond(tab-land) {
-        animation: rotate 3s infinite linear;
-        font-size: 2.2rem;
-    }
-    @include respond(tab-port) {
-        animation: rotate 3s infinite linear;
-        font-size: 2.2rem;
-    }
-    @include respond(phone) {
         display: none;
     }
     
     &__cv {
         text-shadow: 0 0 10px $color-primary, 0 0 2px $color-primary;
-        filter: drop-shadow(0 0 4px $color-primary);
+        -webkit-filter: drop-shadow(0 0 4px $color-primary);
+                filter: drop-shadow(0 0 4px $color-primary);
     }
 
     &__header {
         text-shadow: 0 0 10px $color-secondary, 0 0 2px $color-secondary;
-        filter: drop-shadow(0 0 4px $color-secondary);
+        -webkit-filter: drop-shadow(0 0 4px $color-secondary);
+                filter: drop-shadow(0 0 4px $color-secondary);
     }
 
 }
