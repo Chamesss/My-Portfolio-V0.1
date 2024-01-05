@@ -303,7 +303,7 @@ function Home() {
                                         <img src='../../images/whatsapp.png' alt='whatsapp' className='social-media__footer' />
                                     </a>
                                 </div>
-                                <span className='typo-from typo-from__footer'>Created by <span className='typo-from__footer__name'>Chamsedin Azouz</span> | Copyright &copy; 2023 All rights reserved</span>
+                                <span className='typo-from typo-from__footer'>Created by <span className='typo-from__footer__name'>Chamsedin Azouz</span> | Copyright &copy; 2024 All rights reserved</span>
                             </div>
                         </footer>
                     </div>
